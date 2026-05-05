@@ -175,3 +175,32 @@ const output = { summary, employees };
 fs.mkdirSync(path.dirname(OUTPUT_FILE), { recursive: true });
 fs.writeFileSync(OUTPUT_FILE, JSON.stringify(output, null, 2));
 console.log(`✅ Generated usage.json: ${employees.length} employees, updated ${summary.lastUpdated}`);
+
+// --- Guardian Data ---
+const GUARDIAN_DIR = '/data/.openclaw/guardian';
+const GUARDIAN_OUTPUT = path.join(path.dirname(OUTPUT_FILE), 'guardian.json');
+const INCIDENTS_OUTPUT = path.join(path.dirname(OUTPUT_FILE), 'incidents.jsonl');
+
+try {
+  // Copy guardian scan results
+  const guardianScan = path.join(GUARDIAN_DIR, 'last_scan.json');
+  if (fs.existsSync(guardianScan)) {
+    const scanData = JSON.parse(fs.readFileSync(guardianScan, 'utf-8'));
+    // Enrich with current state
+    const stateFile = path.join(GUARDIAN_DIR, 'state.json');
+    if (fs.existsSync(stateFile)) {
+      const state = JSON.parse(fs.readFileSync(stateFile, 'utf-8'));
+      scanData.state = state;
+    }
+    fs.writeFileSync(GUARDIAN_OUTPUT, JSON.stringify(scanData, null, 2));
+    console.log(`✅ Generated guardian.json: ${scanData.incidents?.length || 0} incidents`);
+  }
+
+  // Copy incidents log
+  const incidentsLog = path.join(GUARDIAN_DIR, 'incidents.jsonl');
+  if (fs.existsSync(incidentsLog)) {
+    fs.copyFileSync(incidentsLog, INCIDENTS_OUTPUT);
+  }
+} catch (e) {
+  console.log(`⚠️ Guardian data not available: ${e.message}`);
+}

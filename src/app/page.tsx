@@ -70,6 +70,14 @@ export default function LandingPage() {
       glow: 'rgba(0,255,136,0.3)',
       delay: '1s',
     },
+    {
+      icon: '🛡️',
+      title: 'Watchdog',
+      desc: 'Live anomaly detection',
+      href: '/watchdog',
+      glow: 'rgba(239,68,68,0.3)',
+      delay: '1.5s',
+    },
   ];
 
   return (
