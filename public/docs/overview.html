@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Livio AI Dashboard — System Overview</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  :root {
+    --purple: #a855f7; --purple-light: #c084fc; --purple-dark: #7c3aed;
+    --green: #22c55e; --red: #ef4444; --amber: #f59e0b; --blue: #3b82f6;
+    --dark: #0a0a1a; --dark2: #0f0f2e;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--dark);
+    color: white;
+    overflow-x: hidden;
+  }
+
+  /* Background grid */
+  .bg-grid {
+    position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: 0.03;
+    background-image: linear-gradient(rgba(168,85,247,0.5) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(168,85,247,0.5) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  /* Particles */
+  .particles { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+  .particle {
+    position: absolute; width: 3px; height: 3px; border-radius: 50%;
+    background: var(--purple); opacity: 0.4;
+    animation: float-particle 8s ease-in-out infinite;
+  }
+  @keyframes float-particle {
+    0%, 100% { transform: translateY(0) translateX(0); opacity: 0.2; }
+    50% { transform: translateY(-100px) translateX(30px); opacity: 0.6; }
+  }
+
+  /* Scan line */
+  .scan-line {
+    position: fixed; left: 0; right: 0; height: 2px; z-index: 1; pointer-events: none;
+    background: linear-gradient(90deg, transparent, var(--purple), transparent);
+    animation: scan 6s linear infinite;
+  }
+  @keyframes scan { from { top: -2px; } to { top: 100vh; } }
+
+  /* Sections */
+  section {
+    position: relative; z-index: 2;
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    padding: 60px 20px;
+  }
+
+  .container { max-width: 900px; width: 100%; }
+
+  /* Reveal animations */
+  .reveal {
+    opacity: 0; transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.15s; }
+  .reveal-delay-2 { transition-delay: 0.3s; }
+  .reveal-delay-3 { transition-delay: 0.45s; }
+  .reveal-delay-4 { transition-delay: 0.6s; }
+
+  /* Hero */
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 6px 16px; border-radius: 50px; font-size: 12px; font-weight: 600;
+    background: rgba(168,85,247,0.15); border: 1px solid rgba(168,85,247,0.3);
+    color: var(--purple-light); margin-bottom: 20px;
+  }
+  .hero-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+  .hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; line-height: 1.1; margin-bottom: 16px; }
+  .hero h1 span { background: linear-gradient(135deg, var(--purple), var(--purple-light), #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .hero p { font-size: 1.1rem; color: rgba(255,255,255,0.5); max-width: 500px; line-height: 1.6; }
+
+  /* Stats row */
+  .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 40px; }
+  .stat-card {
+    text-align: center; padding: 24px 16px; border-radius: 16px;
+    background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);
+    transition: all 0.4s;
+  }
+  .stat-card:hover { border-color: rgba(168,85,247,0.3); background: rgba(168,85,247,0.05); transform: translateY(-4px); }
+  .stat-number { font-size: 2rem; font-weight: 800; font-family: 'JetBrains Mono', monospace; }
+  .stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.4); margin-top: 4px; text-transform: uppercase; letter-spacing: 1px; }
+
+  /* Section headers */
+  .section-icon { font-size: 3rem; margin-bottom: 16px; display: block; }
+  .section-title { font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
+  .section-title span { color: var(--purple); }
+  .section-desc { color: rgba(255,255,255,0.5); font-size: 0.95rem; line-height: 1.7; max-width: 600px; }
+
+  /* Feature cards */
+  .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 32px; }
+  .feature-card {
+    padding: 24px; border-radius: 16px;
+    background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);
+    transition: all 0.3s;
+  }
+  .feature-card:hover { border-color: rgba(168,85,247,0.3); transform: scale(1.02); }
+  .feature-icon { font-size: 2rem; margin-bottom: 12px; }
+  .feature-name { font-weight: 700; margin-bottom: 6px; font-size: 1rem; }
+  .feature-desc { color: rgba(255,255,255,0.4); font-size: 0.85rem; line-height: 1.5; }
+
+  /* Pipeline visualization */
+  .pipeline { display: flex; align-items: center; justify-content: center; gap: 0; margin: 48px 0; flex-wrap: wrap; }
+  .pipeline-node {
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    padding: 20px; border-radius: 16px; min-width: 140px;
+    background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+    transition: all 0.4s; position: relative;
+  }
+  .pipeline-node:hover { transform: scale(1.08); }
+  .pipeline-node.detect { border-color: rgba(239,68,68,0.4); }
+  .pipeline-node.detect:hover { background: rgba(239,68,68,0.08); box-shadow: 0 0 30px rgba(239,68,68,0.15); }
+  .pipeline-node.analyze { border-color: rgba(168,85,247,0.4); }
+  .pipeline-node.analyze:hover { background: rgba(168,85,247,0.08); box-shadow: 0 0 30px rgba(168,85,247,0.15); }
+  .pipeline-node.fix { border-color: rgba(34,197,94,0.4); }
+  .pipeline-node.fix:hover { background: rgba(34,197,94,0.08); box-shadow: 0 0 30px rgba(34,197,94,0.15); }
+  .pipeline-node.verify { border-color: rgba(59,130,246,0.4); }
+  .pipeline-node.verify:hover { background: rgba(59,130,246,0.08); box-shadow: 0 0 30px rgba(59,130,246,0.15); }
+  .pipeline-node .node-icon { font-size: 2.5rem; }
+  .pipeline-node .node-label { font-weight: 700; font-size: 0.9rem; }
+  .pipeline-node .node-sub { font-size: 0.7rem; color: rgba(255,255,255,0.3); }
+
+  .pipeline-arrow {
+    font-size: 1.5rem; color: var(--purple); padding: 0 8px;
+    animation: arrow-pulse 2s ease-in-out infinite;
+  }
+  @keyframes arrow-pulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
+
+  /* Metric grid */
+  .metric-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin-top: 32px; }
+  .metric-item {
+    padding: 14px; border-radius: 12px;
+    background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.04);
+    display: flex; align-items: center; gap: 10px;
+    transition: all 0.3s; font-size: 0.85rem;
+  }
+  .metric-item:hover { border-color: rgba(168,85,247,0.2); background: rgba(168,85,247,0.04); }
+  .metric-item .m-icon { font-size: 1.3rem; flex-shrink: 0; }
+  .metric-item .m-name { color: rgba(255,255,255,0.7); }
+  .metric-item .m-sev { font-size: 0.65rem; font-weight: 700; padding: 2px 6px; border-radius: 4px; margin-left: auto; }
+  .sev-critical { background: rgba(239,68,68,0.15); color: var(--red); }
+  .sev-warning { background: rgba(245,158,11,0.15); color: var(--amber); }
+  .sev-info { background: rgba(59,130,246,0.15); color: var(--blue); }
+
+  /* Cost card */
+  .cost-card {
+    text-align: center; padding: 48px 32px; border-radius: 24px;
+    background: linear-gradient(135deg, rgba(168,85,247,0.1), rgba(34,197,94,0.05));
+    border: 1px solid rgba(168,85,247,0.2); margin-top: 32px;
+  }
+  .cost-big { font-size: 5rem; font-weight: 900; font-family: 'JetBrains Mono', monospace; color: var(--green); }
+  .cost-label { color: rgba(255,255,255,0.4); font-size: 1rem; margin-top: 8px; }
+
+  /* Timeline */
+  .timeline { margin-top: 32px; position: relative; padding-left: 40px; }
+  .timeline::before {
+    content: ''; position: absolute; left: 15px; top: 0; bottom: 0;
+    width: 2px; background: linear-gradient(to bottom, var(--purple), var(--green));
+  }
+  .timeline-item { margin-bottom: 24px; position: relative; }
+  .timeline-item::before {
+    content: ''; position: absolute; left: -30px; top: 6px;
+    width: 10px; height: 10px; border-radius: 50%; background: var(--purple);
+    box-shadow: 0 0 10px var(--purple);
+  }
+  .timeline-item:nth-child(even)::before { background: var(--green); box-shadow: 0 0 10px var(--green); }
+  .timeline-step { font-weight: 700; font-size: 0.9rem; margin-bottom: 2px; }
+  .timeline-desc { color: rgba(255,255,255,0.4); font-size: 0.85rem; }
+
+  /* Footer */
+  .footer { text-align: center; padding: 60px 20px; color: rgba(255,255,255,0.2); font-size: 0.8rem; }
+
+  /* Live indicator */
+  .live-tag {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 4px 12px; border-radius: 50px; font-size: 11px; font-weight: 700;
+    background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3); color: var(--green);
+  }
+  .live-tag .live-dot {
+    width: 6px; height: 6px; border-radius: 50%; background: var(--green);
+    animation: pulse 1.5s infinite;
+    box-shadow: 0 0 6px var(--green);
+  }
+
+  /* URL box */
+  .url-box {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 12px 20px; border-radius: 12px; margin-top: 20px;
+    background: rgba(168,85,247,0.08); border: 1px solid rgba(168,85,247,0.2);
+    font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--purple-light);
+  }
+
+  /* Radar */
+  .radar-container { position: relative; width: 120px; height: 120px; margin: 0 auto 24px; }
+  .radar-ring { position: absolute; border-radius: 50%; border: 1px solid rgba(168,85,247,0.15); }
+  .radar-ring:nth-child(1) { inset: 0; }
+  .radar-ring:nth-child(2) { inset: 20px; }
+  .radar-ring:nth-child(3) { inset: 40px; }
+  .radar-sweep {
+    position: absolute; top: 50%; left: 50%; width: 50%; height: 2px;
+    transform-origin: left center; background: linear-gradient(90deg, rgba(168,85,247,0.8), transparent);
+    animation: radar-rotate 3s linear infinite;
+  }
+  @keyframes radar-rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  .radar-center {
+    position: absolute; top: 50%; left: 50%; width: 6px; height: 6px;
+    transform: translate(-50%, -50%); border-radius: 50%;
+    background: var(--purple); box-shadow: 0 0 10px var(--purple);
+    animation: pulse 2s infinite;
+  }
+
+  @media (max-width: 640px) {
+    .stats-row { grid-template-columns: repeat(2, 1fr); }
+    .pipeline { flex-direction: column; }
+    .pipeline-arrow { transform: rotate(90deg); }
+  }
+</style>
+</head>
+<body>
+
+<div class="bg-grid"></div>
+<div class="particles" id="particles"></div>
+<div class="scan-line"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="reveal">
+      <div class="hero-badge"><span class="dot"></span> System Overview</div>
+    </div>
+    <h1 class="reveal reveal-delay-1">Livio AI<br><span>Dashboard & Guardian</span></h1>
+    <p class="reveal reveal-delay-2">Real-time usage analytics, automated anomaly detection, and self-healing infrastructure — all at zero token cost.</p>
+    <div class="stats-row reveal reveal-delay-3">
+      <div class="stat-card">
+        <div class="stat-number" style="color:var(--purple)">35</div>
+        <div class="stat-label">Employees</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" style="color:var(--red)">14</div>
+        <div class="stat-label">Anomaly Checks</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" style="color:var(--green)">$0</div>
+        <div class="stat-label">Token Cost</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" style="color:var(--blue)">5min</div>
+        <div class="stat-label">Scan Cycle</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DASHBOARD -->
+<section>
+  <div class="container">
+    <span class="section-icon reveal">📊</span>
+    <h2 class="section-title reveal">The <span>Dashboard</span></h2>
+    <p class="section-desc reveal">A real-time web dashboard deployed on GitHub Pages. Every employee can see their AI usage, HR gets the full picture, and leaders track who's winning.</p>
+    
+    <div class="feature-grid reveal">
+      <div class="feature-card">
+        <div class="feature-icon">👤</div>
+        <div class="feature-name">My Dashboard</div>
+        <div class="feature-desc">Personal stats — tokens, hours, badges, rank. Gamified to encourage productive AI usage.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">👔</div>
+        <div class="feature-name">HR Dashboard</div>
+        <div class="feature-desc">Password-protected. Team analytics, cost charts, employee breakdown, session details.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏆</div>
+        <div class="feature-name">Leaderboard</div>
+        <div class="feature-desc">Podium for top 3. Weekly vs all-time. Power user badges and streak tracking.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="text-align:center; margin-top:24px;">
+      <div class="live-tag"><span class="live-dot"></span> LIVE NOW</div>
+      <div class="url-box">🌐 sweden-technologies.github.io/openclaw-dashboard</div>
+    </div>
+  </div>
+</section>
+
+<!-- WATCHDOG -->
+<section>
+  <div class="container" style="text-align:center;">
+    <div class="radar-container reveal">
+      <div class="radar-ring"></div>
+      <div class="radar-ring"></div>
+      <div class="radar-ring"></div>
+      <div class="radar-sweep"></div>
+      <div class="radar-center"></div>
+    </div>
+    <h2 class="section-title reveal">The <span>Watchdog</span></h2>
+    <p class="section-desc reveal" style="margin:0 auto;">An autonomous Python agent that scans all 39 workspaces every 5 minutes, monitoring 14 different anomaly types across cost, behavior, and system health.</p>
+
+    <div class="metric-grid reveal" style="text-align:left;">
+      <div class="metric-item"><span class="m-icon">💰</span><span class="m-name">Cost Spike</span><span class="m-sev sev-critical">CRITICAL</span></div>
+      <div class="metric-item"><span class="m-icon">🔢</span><span class="m-name">Token Flood</span><span class="m-sev sev-critical">CRITICAL</span></div>
+      <div class="metric-item"><span class="m-icon">🔄</span><span class="m-name">Tool Loop</span><span class="m-sev sev-critical">CRITICAL</span></div>
+      <div class="metric-item"><span class="m-icon">🧠</span><span class="m-name">RAM Usage</span><span class="m-sev sev-critical">CRITICAL</span></div>
+      <div class="metric-item"><span class="m-icon">🔄</span><span class="m-name">Restarts</span><span class="m-sev sev-critical">CRITICAL</span></div>
+      <div class="metric-item"><span class="m-icon">💳</span><span class="m-name">Daily Spend</span><span class="m-sev sev-warning">WARN</span></div>
+      <div class="metric-item"><span class="m-icon">💵</span><span class="m-name">Session Cost</span><span class="m-sev sev-warning">WARN</span></div>
+      <div class="metric-item"><span class="m-icon">❌</span><span class="m-name">Error Storm</span><span class="m-sev sev-warning">WARN</span></div>
+      <div class="metric-item"><span class="m-icon">⏳</span><span class="m-name">Idle Session</span><span class="m-sev sev-warning">WARN</span></div>
+      <div class="metric-item"><span class="m-icon">🧟</span><span class="m-name">Zombie Session</span><span class="m-sev sev-warning">WARN</span></div>
+      <div class="metric-item"><span class="m-icon">💸</span><span class="m-name">Expensive Model</span><span class="m-sev sev-warning">WARN</span></div>
+      <div class="metric-item"><span class="m-icon">⚙️</span><span class="m-name">CPU High</span><span class="m-sev sev-warning">WARN</span></div>
+      <div class="metric-item"><span class="m-icon">🌙</span><span class="m-name">Unusual Hours</span><span class="m-sev sev-info">INFO</span></div>
+      <div class="metric-item"><span class="m-icon">📊</span><span class="m-name">Budget Breach</span><span class="m-sev sev-warning">WARN</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FIXER PIPELINE -->
+<section>
+  <div class="container" style="text-align:center;">
+    <span class="section-icon reveal">🔧</span>
+    <h2 class="section-title reveal">The <span>Fixer</span></h2>
+    <p class="section-desc reveal" style="margin:0 auto;">When Watchdog detects a problem, Fixer automatically steps in. No human needed. Detect → Fix → Verify. The entire loop runs in seconds.</p>
+
+    <div class="pipeline reveal">
+      <div class="pipeline-node detect">
+        <span class="node-icon">🔍</span>
+        <span class="node-label">Detect</span>
+        <span class="node-sub">Watchdog scans</span>
+      </div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-node analyze">
+        <span class="node-icon">🧠</span>
+        <span class="node-label">Analyze</span>
+        <span class="node-sub">Classify severity</span>
+      </div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-node fix">
+        <span class="node-icon">🔧</span>
+        <span class="node-label">Fix</span>
+        <span class="node-sub">Apply auto-fix</span>
+      </div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-node verify">
+        <span class="node-icon">✅</span>
+        <span class="node-label">Verify</span>
+        <span class="node-sub">Re-scan confirms</span>
+      </div>
+    </div>
+
+    <div class="timeline reveal" style="text-align:left; max-width:500px; margin:0 auto;">
+      <div class="timeline-item">
+        <div class="timeline-step">🔍 Watchdog scans every 5 minutes</div>
+        <div class="timeline-desc">Reads all 39 workspace session files, checks 14 metrics</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-step">⚠️ Anomaly detected</div>
+        <div class="timeline-desc">Classified as Critical, Warning, or Info</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-step">🔧 Fixer applies the fix</div>
+        <div class="timeline-desc">Compact sessions, kill loops, pause spenders, clean caches</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-step">🔄 Re-scan confirms resolution</div>
+        <div class="timeline-desc">Monitor runs again, verifies the fix worked</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-step">📊 Dashboard updates</div>
+        <div class="timeline-desc">Status flips from ⚠️ to ✅ — visible in real-time</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COST -->
+<section>
+  <div class="container" style="text-align:center;">
+    <span class="section-icon reveal">💰</span>
+    <h2 class="section-title reveal">The <span>Cost</span></h2>
+    <p class="section-desc reveal" style="margin:0 auto;">The entire system — Dashboard, Watchdog, and Fixer — costs nothing in AI tokens. All monitoring and fixing is pure Python. No model calls. No API costs.</p>
+
+    <div class="cost-card reveal">
+      <div class="cost-big">$0</div>
+      <div class="cost-label">Additional token cost per month</div>
+    </div>
+
+    <div class="feature-grid reveal" style="margin-top:24px;">
+      <div class="feature-card" style="text-align:center;">
+        <div class="feature-icon">🌐</div>
+        <div class="feature-name">Dashboard</div>
+        <div class="feature-desc">Static site on GitHub Pages — free hosting, zero server cost</div>
+      </div>
+      <div class="feature-card" style="text-align:center;">
+        <div class="feature-icon">🐍</div>
+        <div class="feature-name">Watchdog</div>
+        <div class="feature-desc">Pure Python — reads files, checks numbers, writes logs</div>
+      </div>
+      <div class="feature-card" style="text-align:center;">
+        <div class="feature-icon">🔧</div>
+        <div class="feature-name">Fixer</div>
+        <div class="feature-desc">Pure Python — compacts, kills, cleans — no AI needed</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p>Livio AI Systems — golivio.com</p>
+  <p style="margin-top:8px;">Built by Ashwin Pawar, Chief AI Officer · May 2026</p>
+  <p style="margin-top:8px; color:rgba(255,255,255,0.1);">Confidential — Internal Use Only</p>
+</div>
+
+<script>
+  // Create particles
+  const particles = document.getElementById('particles');
+  for (let i = 0; i < 30; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    p.style.left = Math.random() * 100 + '%';
+    p.style.top = Math.random() * 100 + '%';
+    p.style.animationDelay = Math.random() * 8 + 's';
+    p.style.animationDuration = (6 + Math.random() * 6) + 's';
+    particles.appendChild(p);
+  }
+
+  // Reveal on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Counter animation for stat numbers
+  function animateCounter(el, target, suffix = '') {
+    let current = 0;
+    const increment = target / 40;
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        current = target;
+        clearInterval(timer);
+      }
+      el.textContent = Math.round(current) + suffix;
+    }, 30);
+  }
+
+  // Trigger counters when stats row is visible
+  const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const cards = entry.target.querySelectorAll('.stat-number');
+        cards.forEach(card => {
+          const text = card.textContent;
+          if (text === '35') animateCounter(card, 35);
+          else if (text === '14') animateCounter(card, 14);
+          else if (text === '$0') { card.textContent = '$0'; }
+          else if (text === '5min') { card.textContent = '5min'; }
+        });
+        statsObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  const statsRow = document.querySelector('.stats-row');
+  if (statsRow) statsObserver.observe(statsRow);
+</script>
+</body>
+</html>

@@ -1,11 +1,11 @@
 {
   "summary": {
     "totalEmployees": 35,
-    "totalWeeklyHours": 24.2,
+    "totalWeeklyHours": 25.4,
     "goalMetCount": 0,
-    "totalTokens": 14676100,
-    "totalCost": 34.22,
-    "lastUpdated": "2026-05-05T12:47:59.763Z"
+    "totalTokens": 14928757,
+    "totalCost": 34.69,
+    "lastUpdated": "2026-05-05T13:06:45.121Z"
   },
   "employees": [
     {
@@ -69,6 +69,26 @@
       "rank": 3
     },
     {
+      "name": "shivakumar",
+      "agentId": "shivakumar_workspace",
+      "tokensIn": 357844,
+      "tokensOut": 5432,
+      "totalTokens": 363276,
+      "weeklyTokensIn": 357844,
+      "weeklyTokensOut": 5432,
+      "weeklyTokens": 363276,
+      "estimatedHours": 1.8,
+      "weeklyHours": 1.8,
+      "totalCost": 0.6166,
+      "weeklyCost": 0.6166,
+      "totalRuntimeMs": 0,
+      "weeklyRuntimeMs": 0,
+      "streak": 0,
+      "lastActive": "2026-05-05T13:06:39.543Z",
+      "sessionCount": 1,
+      "rank": 4
+    },
+    {
       "name": "Arvind",
       "agentId": "arvind_workspace",
       "tokensIn": 291815,
@@ -86,7 +106,7 @@
       "streak": 0,
       "lastActive": "2026-05-04T15:47:30.867Z",
       "sessionCount": 1,
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "Jatin",
@@ -106,7 +126,7 @@
       "streak": 0,
       "lastActive": "2026-05-05T12:46:33.490Z",
       "sessionCount": 1,
-      "rank": 5
+      "rank": 6
     },
     {
       "name": "sagarkarpe",
@@ -126,7 +146,7 @@
       "streak": 0,
       "lastActive": "2026-05-05T11:23:17.317Z",
       "sessionCount": 2,
-      "rank": 6
+      "rank": 7
     },
     {
       "name": "rohit",
@@ -146,7 +166,7 @@
       "streak": 0,
       "lastActive": "2026-05-05T10:03:00.811Z",
       "sessionCount": 1,
-      "rank": 7
+      "rank": 8
     },
     {
       "name": "Akshay",
@@ -166,7 +186,7 @@
       "streak": 0,
       "lastActive": "2026-05-05T09:34:01.834Z",
       "sessionCount": 1,
-      "rank": 8
+      "rank": 9
     },
     {
       "name": "Pooja",
@@ -186,7 +206,7 @@
       "streak": 0,
       "lastActive": "2026-05-04T14:26:09.119Z",
       "sessionCount": 2,
-      "rank": 9
+      "rank": 10
     },
     {
       "name": "Dhananjay",
@@ -206,7 +226,7 @@
       "streak": 0,
       "lastActive": "2026-05-05T10:12:08.648Z",
       "sessionCount": 1,
-      "rank": 10
+      "rank": 11
     },
     {
       "name": "vignesh",
@@ -226,7 +246,7 @@
       "streak": 0,
       "lastActive": "2026-05-05T03:03:12.988Z",
       "sessionCount": 1,
-      "rank": 11
+      "rank": 12
     },
     {
       "name": "Naveen",
@@ -245,26 +265,6 @@
       "weeklyRuntimeMs": 0,
       "streak": 0,
       "lastActive": "2026-05-04T18:18:54.329Z",
-      "sessionCount": 1,
-      "rank": 12
-    },
-    {
-      "name": "shivakumar",
-      "agentId": "shivakumar_workspace",
-      "tokensIn": 111715,
-      "tokensOut": 1726,
-      "totalTokens": 113441,
-      "weeklyTokensIn": 111715,
-      "weeklyTokensOut": 1726,
-      "weeklyTokens": 113441,
-      "estimatedHours": 0.6,
-      "weeklyHours": 0.6,
-      "totalCost": 0.1813,
-      "weeklyCost": 0.1813,
-      "totalRuntimeMs": 0,
-      "weeklyRuntimeMs": 0,
-      "streak": 0,
-      "lastActive": "2026-05-05T12:40:25.325Z",
       "sessionCount": 1,
       "rank": 13
     },
@@ -691,20 +691,20 @@
     {
       "name": "Gopika",
       "agentId": "gopika_workspace",
-      "tokensIn": 4638,
-      "tokensOut": 793,
-      "totalTokens": 5431,
-      "weeklyTokensIn": 4638,
-      "weeklyTokensOut": 793,
-      "weeklyTokens": 5431,
+      "tokensIn": 7048,
+      "tokensOut": 1205,
+      "totalTokens": 8253,
+      "weeklyTokensIn": 7048,
+      "weeklyTokensOut": 1205,
+      "weeklyTokens": 8253,
       "estimatedHours": 0,
       "weeklyHours": 0,
-      "totalCost": 0.0404,
-      "weeklyCost": 0.0404,
+      "totalCost": 0.066,
+      "weeklyCost": 0.066,
       "totalRuntimeMs": 0,
       "weeklyRuntimeMs": 0,
       "streak": 0,
-      "lastActive": "2026-05-05T12:45:34.977Z",
+      "lastActive": "2026-05-05T12:49:07.207Z",
       "sessionCount": 1,
       "rank": 35
     }
