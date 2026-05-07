@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-05-07T14:30:38.842321+00:00",
-  "total_projects": 2,
+  "updated_at": "2026-05-07T15:01:33.762909Z",
+  "total_projects": 9,
   "projects": [
     {
       "id": "chris-workspace-dc-vs-ai-dc",
@@ -81,6 +81,229 @@
         "BRAINSTORM.md",
         "MVP_PLAN.md",
         "PROBLEM_STATEMENT.md",
+        "PROGRESS.md"
+      ]
+    },
+    {
+      "id": "raghu-revit-facade-gen",
+      "workspace": "raghu_workspace",
+      "employee_name": "Raghu",
+      "department": "Engineering",
+      "title": "Revit Facade Generator",
+      "column": "executing",
+      "status": "active",
+      "current_phase": 3,
+      "total_phases": 5,
+      "phases": [
+        {
+          "name": "Setup project structure",
+          "status": "done"
+        },
+        {
+          "name": "Read Revit API docs",
+          "status": "done"
+        },
+        {
+          "name": "Generate parametric model",
+          "status": "running"
+        },
+        {
+          "name": "Validate output",
+          "status": "queued"
+        },
+        {
+          "name": "Export to .rvt",
+          "status": "queued"
+        }
+      ],
+      "cost_usd": 0.18,
+      "tokens_used": 8420,
+      "created_at": "2026-05-06T15:01:33.762989Z",
+      "updated_at": "2026-05-07T14:31:33.763002Z",
+      "files": [
+        "BRAINSTORM.md",
+        "MVP_PLAN.md",
+        "PROGRESS.md"
+      ]
+    },
+    {
+      "id": "shivakumar-lien-waiver",
+      "workspace": "shivakumar_workspace",
+      "employee_name": "Shivakumar",
+      "department": "Engineering",
+      "title": "Lien Waiver Automation App",
+      "column": "executing",
+      "status": "active",
+      "current_phase": 4,
+      "total_phases": 4,
+      "phases": [
+        {
+          "name": "Design database schema",
+          "status": "done"
+        },
+        {
+          "name": "Build API endpoints",
+          "status": "done"
+        },
+        {
+          "name": "Create frontend UI",
+          "status": "done"
+        },
+        {
+          "name": "Testing and deployment",
+          "status": "running"
+        }
+      ],
+      "cost_usd": 0.45,
+      "tokens_used": 24300,
+      "created_at": "2026-05-06T15:01:33.762989Z",
+      "updated_at": "2026-05-07T14:31:33.763002Z",
+      "files": [
+        "BRAINSTORM.md",
+        "MVP_PLAN.md",
+        "PROGRESS.md"
+      ]
+    },
+    {
+      "id": "vignesh-ats-chatbot",
+      "workspace": "vignesh_workspace",
+      "employee_name": "Vignesh",
+      "department": "Engineering",
+      "title": "GoLivio ATS Chatbot",
+      "column": "planning",
+      "status": "active",
+      "current_phase": 0,
+      "total_phases": 3,
+      "phases": [
+        {
+          "name": "Research ATS APIs",
+          "status": "done"
+        },
+        {
+          "name": "Design conversation flow",
+          "status": "running"
+        },
+        {
+          "name": "Build prototype",
+          "status": "queued"
+        }
+      ],
+      "cost_usd": 0.08,
+      "tokens_used": 3200,
+      "created_at": "2026-05-07T13:01:33.762971Z",
+      "updated_at": "2026-05-07T13:01:33.762971Z",
+      "files": [
+        "BRAINSTORM.md",
+        "PROBLEM_STATEMENT.md"
+      ]
+    },
+    {
+      "id": "omkar-owj-pipeline",
+      "workspace": "omkar_workspace",
+      "employee_name": "Omkar",
+      "department": "Engineering",
+      "title": "OWJ Modelling Pipeline",
+      "column": "planning",
+      "status": "active",
+      "current_phase": 0,
+      "total_phases": 4,
+      "phases": [
+        {
+          "name": "Analyze requirements",
+          "status": "done"
+        },
+        {
+          "name": "Design pipeline architecture",
+          "status": "running"
+        },
+        {
+          "name": "Implement data flow",
+          "status": "queued"
+        },
+        {
+          "name": "Test and optimize",
+          "status": "queued"
+        }
+      ],
+      "cost_usd": 0.05,
+      "tokens_used": 2100,
+      "created_at": "2026-05-07T13:01:33.762971Z",
+      "updated_at": "2026-05-07T13:01:33.762971Z",
+      "files": [
+        "BRAINSTORM.md",
+        "PROBLEM_STATEMENT.md",
+        "MVP_PLAN.md"
+      ]
+    },
+    {
+      "id": "kristi-budget-dashboard",
+      "workspace": "kristi_workspace",
+      "employee_name": "Kristi",
+      "department": "Finance",
+      "title": "Monthly Budget Dashboard",
+      "column": "brainstorm",
+      "status": "active",
+      "current_phase": 0,
+      "total_phases": 0,
+      "phases": [],
+      "cost_usd": 0.0,
+      "tokens_used": 0,
+      "created_at": "2026-05-07T14:31:33.763002Z",
+      "updated_at": "2026-05-07T14:31:33.763002Z",
+      "files": [
+        "BRAINSTORM.md"
+      ]
+    },
+    {
+      "id": "chris-dc-comparison-tool",
+      "workspace": "chris_workspace",
+      "employee_name": "Chris",
+      "department": "Sales",
+      "title": "DC Comparison Tool v2",
+      "column": "brainstorm",
+      "status": "active",
+      "current_phase": 0,
+      "total_phases": 0,
+      "phases": [],
+      "cost_usd": 0.0,
+      "tokens_used": 0,
+      "created_at": "2026-05-07T14:31:33.763002Z",
+      "updated_at": "2026-05-07T14:31:33.763002Z",
+      "files": [
+        "BRAINSTORM.md"
+      ]
+    },
+    {
+      "id": "abhishek-offer-letter-gen",
+      "workspace": "abhishek_workspace",
+      "employee_name": "Abhishek",
+      "department": "HR",
+      "title": "Offer Letter Template Generator",
+      "column": "executing",
+      "status": "active",
+      "current_phase": 2,
+      "total_phases": 3,
+      "phases": [
+        {
+          "name": "Gather template requirements",
+          "status": "done"
+        },
+        {
+          "name": "Build template engine",
+          "status": "running"
+        },
+        {
+          "name": "Test with sample data",
+          "status": "queued"
+        }
+      ],
+      "cost_usd": 0.12,
+      "tokens_used": 5600,
+      "created_at": "2026-05-07T13:01:33.762971Z",
+      "updated_at": "2026-05-07T14:31:33.763002Z",
+      "files": [
+        "BRAINSTORM.md",
+        "MVP_PLAN.md",
         "PROGRESS.md"
       ]
     }
