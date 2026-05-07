@@ -1,294 +1,235 @@
 {
-  "scan_time": "2026-05-05T18:36:45.007245+05:30",
+  "scan_time": "2026-05-07T17:33:26.459027+05:30",
   "workspaces_scanned": 39,
   "incidents": [
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "rahul_workspace",
-      "metric": 957.4,
+      "metric": 2362.6,
       "threshold": 30,
-      "message": "⏳ Idle session in rahul_workspace: 957 min idle, 12 user msgs vs 89 assistant msgs",
-      "timestamp": "2026-05-05T18:36:44.846198+05:30"
-    },
-    {
-      "type": "idle_session",
-      "severity": "warning",
-      "workspace": "pooja_workspace",
-      "metric": 1360.6,
-      "threshold": 30,
-      "message": "⏳ Idle session in pooja_workspace: 1361 min idle, 13 user msgs vs 54 assistant msgs",
-      "timestamp": "2026-05-05T18:36:44.858595+05:30"
+      "message": "⏳ Idle session in rahul_workspace: 2363 min idle, 8 user msgs vs 84 assistant msgs",
+      "timestamp": "2026-05-07T17:33:26.290754+05:30"
     },
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "akash_workspace",
-      "metric": 5530.4,
+      "metric": 8347.1,
       "threshold": 30,
-      "message": "⏳ Idle session in akash_workspace: 5530 min idle, 5 user msgs vs 34 assistant msgs",
-      "timestamp": "2026-05-05T18:36:44.861643+05:30"
+      "message": "⏳ Idle session in akash_workspace: 8347 min idle, 5 user msgs vs 34 assistant msgs",
+      "timestamp": "2026-05-07T17:33:26.299526+05:30"
     },
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "nidhi_workspace",
-      "metric": 5631.9,
+      "metric": 8448.5,
       "threshold": 30,
-      "message": "⏳ Idle session in nidhi_workspace: 5632 min idle, 5 user msgs vs 19 assistant msgs",
-      "timestamp": "2026-05-05T18:36:44.870751+05:30"
+      "message": "⏳ Idle session in nidhi_workspace: 8449 min idle, 5 user msgs vs 19 assistant msgs",
+      "timestamp": "2026-05-07T17:33:26.312532+05:30"
+    },
+    {
+      "type": "idle_session",
+      "severity": "warning",
+      "workspace": "pramod_workspace",
+      "metric": 57.9,
+      "threshold": 30,
+      "message": "⏳ Idle session in pramod_workspace: 58 min idle, 5 user msgs vs 30 assistant msgs",
+      "timestamp": "2026-05-07T17:33:26.319770+05:30"
     },
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "manju_workspace",
-      "metric": 1581.2,
+      "metric": 4397.8,
       "threshold": 30,
-      "message": "⏳ Idle session in manju_workspace: 1581 min idle, 10 user msgs vs 39 assistant msgs",
-      "timestamp": "2026-05-05T18:36:44.880340+05:30"
+      "message": "⏳ Idle session in manju_workspace: 4398 min idle, 10 user msgs vs 39 assistant msgs",
+      "timestamp": "2026-05-07T17:33:26.323894+05:30"
     },
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "nav_workspace",
-      "metric": 5657.5,
+      "metric": 8474.2,
       "threshold": 30,
-      "message": "⏳ Idle session in nav_workspace: 5658 min idle, 3 user msgs vs 33 assistant msgs",
-      "timestamp": "2026-05-05T18:36:44.883694+05:30"
-    },
-    {
-      "type": "idle_session",
-      "severity": "warning",
-      "workspace": "arvind_workspace",
-      "metric": 1279.2,
-      "threshold": 30,
-      "message": "⏳ Idle session in arvind_workspace: 1279 min idle, 2 user msgs vs 52 assistant msgs",
-      "timestamp": "2026-05-05T18:36:44.886712+05:30"
+      "message": "⏳ Idle session in nav_workspace: 8474 min idle, 3 user msgs vs 33 assistant msgs",
+      "timestamp": "2026-05-07T17:33:26.326863+05:30"
     },
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "dipak_workspace",
-      "metric": 1498.6,
+      "metric": 4315.3,
       "threshold": 30,
-      "message": "⏳ Idle session in dipak_workspace: 1499 min idle, 41 user msgs vs 146 assistant msgs",
-      "timestamp": "2026-05-05T18:36:44.903193+05:30"
+      "message": "⏳ Idle session in dipak_workspace: 4315 min idle, 41 user msgs vs 146 assistant msgs",
+      "timestamp": "2026-05-07T17:33:26.340889+05:30"
     },
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "raghu_workspace",
-      "metric": 179.5,
+      "metric": 171.6,
       "threshold": 30,
-      "message": "⏳ Idle session in raghu_workspace: 179 min idle, 19 user msgs vs 140 assistant msgs",
-      "timestamp": "2026-05-05T18:36:44.920589+05:30"
-    },
-    {
-      "type": "idle_session",
-      "severity": "warning",
-      "workspace": "rohit_workspace",
-      "metric": 183.7,
-      "threshold": 30,
-      "message": "⏳ Idle session in rohit_workspace: 184 min idle, 5 user msgs vs 39 assistant msgs",
-      "timestamp": "2026-05-05T18:36:44.924132+05:30"
+      "message": "⏳ Idle session in raghu_workspace: 172 min idle, 12 user msgs vs 91 assistant msgs",
+      "timestamp": "2026-05-07T17:33:26.353155+05:30"
     },
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "varsha_workspace",
-      "metric": 1407.6,
+      "metric": 4224.3,
       "threshold": 30,
-      "message": "⏳ Idle session in varsha_workspace: 1408 min idle, 4 user msgs vs 16 assistant msgs",
-      "timestamp": "2026-05-05T18:36:44.926516+05:30"
-    },
-    {
-      "type": "idle_session",
-      "severity": "warning",
-      "workspace": "sagarkarpe_workspace",
-      "metric": 103.5,
-      "threshold": 30,
-      "message": "⏳ Idle session in sagarkarpe_workspace: 103 min idle, 10 user msgs vs 74 assistant msgs",
-      "timestamp": "2026-05-05T18:36:44.932649+05:30"
+      "message": "⏳ Idle session in varsha_workspace: 4224 min idle, 4 user msgs vs 16 assistant msgs",
+      "timestamp": "2026-05-07T17:33:26.359496+05:30"
     },
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "kristi_workspace",
-      "metric": 5573.3,
+      "metric": 8390,
       "threshold": 30,
-      "message": "⏳ Idle session in kristi_workspace: 5573 min idle, 14 user msgs vs 51 assistant msgs",
-      "timestamp": "2026-05-05T18:36:44.939912+05:30"
+      "message": "⏳ Idle session in kristi_workspace: 8390 min idle, 14 user msgs vs 51 assistant msgs",
+      "timestamp": "2026-05-07T17:33:26.373923+05:30"
     },
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "apurva_workspace",
-      "metric": 1176.9,
+      "metric": 3993.6,
       "threshold": 30,
-      "message": "⏳ Idle session in apurva_workspace: 1177 min idle, 13 user msgs vs 50 assistant msgs",
-      "timestamp": "2026-05-05T18:36:44.947714+05:30"
+      "message": "⏳ Idle session in apurva_workspace: 3994 min idle, 13 user msgs vs 50 assistant msgs",
+      "timestamp": "2026-05-07T17:33:26.382719+05:30"
     },
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "vignesh_workspace",
-      "metric": 603.5,
+      "metric": 3420.2,
       "threshold": 30,
-      "message": "⏳ Idle session in vignesh_workspace: 604 min idle, 10 user msgs vs 49 assistant msgs",
-      "timestamp": "2026-05-05T18:36:44.960653+05:30"
+      "message": "⏳ Idle session in vignesh_workspace: 3420 min idle, 10 user msgs vs 49 assistant msgs",
+      "timestamp": "2026-05-07T17:33:26.394722+05:30"
     },
     {
       "type": "idle_session",
       "severity": "warning",
-      "workspace": "anupam_workspace",
-      "metric": 1434.5,
+      "workspace": "shivakumar_workspace",
+      "metric": 1168.3,
       "threshold": 30,
-      "message": "⏳ Idle session in anupam_workspace: 1434 min idle, 1 user msgs vs 16 assistant msgs",
-      "timestamp": "2026-05-05T18:36:44.965570+05:30"
-    },
-    {
-      "type": "token_flood",
-      "severity": "critical",
-      "workspace": "shivakumar_workspace",
-      "metric": 909644,
-      "threshold": 500000,
-      "message": "🔢 Workspace shivakumar_workspace used 909,644 tokens in 1 hour (limit: 500,000)",
-      "timestamp": "2026-05-05T18:36:44.969483+05:30"
-    },
-    {
-      "type": "session_cost",
-      "severity": "warning",
-      "workspace": "shivakumar_workspace",
-      "metric": 0.6165873999999999,
-      "threshold": 0.5,
-      "message": "💵 Session cost for shivakumar_workspace: $0.62 (limit: $0.50)",
-      "timestamp": "2026-05-05T18:36:44.969538+05:30"
-    },
-    {
-      "type": "token_flood",
-      "severity": "critical",
-      "workspace": "jatin_workspace",
-      "metric": 552477,
-      "threshold": 500000,
-      "message": "🔢 Workspace jatin_workspace used 552,477 tokens in 1 hour (limit: 500,000)",
-      "timestamp": "2026-05-05T18:36:44.971584+05:30"
+      "message": "⏳ Idle session in shivakumar_workspace: 1168 min idle, 5 user msgs vs 25 assistant msgs",
+      "timestamp": "2026-05-07T17:33:26.412439+05:30"
     },
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "sagar_workspace",
-      "metric": 1374.9,
+      "metric": 1457.3,
       "threshold": 30,
-      "message": "⏳ Idle session in sagar_workspace: 1375 min idle, 31 user msgs vs 116 assistant msgs",
-      "timestamp": "2026-05-05T18:36:44.980453+05:30"
+      "message": "⏳ Idle session in sagar_workspace: 1457 min idle, 15 user msgs vs 74 assistant msgs",
+      "timestamp": "2026-05-07T17:33:26.427315+05:30"
+    },
+    {
+      "type": "idle_session",
+      "severity": "warning",
+      "workspace": "akshay_workspace",
+      "metric": 1327,
+      "threshold": 30,
+      "message": "⏳ Idle session in akshay_workspace: 1327 min idle, 5 user msgs vs 32 assistant msgs",
+      "timestamp": "2026-05-07T17:33:26.431557+05:30"
     },
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "chris_workspace",
-      "metric": 1585.8,
+      "metric": 4402.5,
       "threshold": 30,
-      "message": "⏳ Idle session in chris_workspace: 1586 min idle, 32 user msgs vs 171 assistant msgs",
-      "timestamp": "2026-05-05T18:36:44.994098+05:30"
+      "message": "⏳ Idle session in chris_workspace: 4402 min idle, 32 user msgs vs 171 assistant msgs",
+      "timestamp": "2026-05-07T17:33:26.442105+05:30"
     },
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "will_workspace",
-      "metric": 9561.1,
+      "metric": 12377.8,
       "threshold": 30,
-      "message": "⏳ Idle session in will_workspace: 9561 min idle, 14 user msgs vs 47 assistant msgs",
-      "timestamp": "2026-05-05T18:36:44.997137+05:30"
+      "message": "⏳ Idle session in will_workspace: 12378 min idle, 14 user msgs vs 47 assistant msgs",
+      "timestamp": "2026-05-07T17:33:26.446267+05:30"
     },
     {
       "type": "daily_spend",
       "severity": "warning",
       "workspace": "ALL",
-      "metric": 37.40925510000005,
+      "metric": 60.63239296399992,
       "threshold": 10,
-      "message": "💳 Daily company spend: $37.41 (limit: $10.00)",
-      "timestamp": "2026-05-05T18:36:45.007090+05:30"
+      "message": "💳 Daily company spend: $60.63 (limit: $10.00)",
+      "timestamp": "2026-05-07T17:33:26.458818+05:30"
     },
     {
       "type": "container_restarts",
       "severity": "critical",
       "workspace": "SYSTEM",
-      "metric": 11,
+      "metric": 36,
       "threshold": 3,
-      "message": "🔄 Container restarts: 11 in last hour (limit: 3)",
-      "timestamp": "2026-05-05T18:36:45.007203+05:30"
+      "message": "🔄 Container restarts: 36 in last hour (limit: 3)",
+      "timestamp": "2026-05-07T17:33:26.458964+05:30"
     }
   ],
   "auto_fixes": [],
   "state": {
-    "last_scan": "2026-05-05T18:36:45.007245+05:30",
+    "last_scan": "2026-05-07T17:33:26.459027+05:30",
     "hourly_costs": {},
     "cpu_readings": [
       {
-        "time": 1777985516.7349436,
-        "idle": 37433449,
-        "total": 38129703
+        "time": 1778154732.6346307,
+        "idle": 104324782,
+        "total": 105850507
       },
       {
-        "time": 1777985533.317027,
-        "idle": 37439975,
-        "total": 38136337
+        "time": 1778154804.5825531,
+        "idle": 104352972,
+        "total": 105879338
       },
       {
-        "time": 1777985551.2374582,
-        "idle": 37446845,
-        "total": 38143502
+        "time": 1778154804.8524547,
+        "idle": 104353048,
+        "total": 105879449
       },
       {
-        "time": 1777985551.4678802,
-        "idle": 37446913,
-        "total": 38143594
+        "time": 1778155033.1579359,
+        "idle": 104442129,
+        "total": 105971064
       },
       {
-        "time": 1777985803.3861895,
-        "idle": 37545367,
-        "total": 38244369
+        "time": 1778155105.3800406,
+        "idle": 104470359,
+        "total": 106000027
       },
       {
-        "time": 1777985803.6089485,
-        "idle": 37545433,
-        "total": 38244457
+        "time": 1778155105.6191025,
+        "idle": 104470427,
+        "total": 106000121
       },
       {
-        "time": 1777985833.8105624,
-        "idle": 37557413,
-        "total": 38256535
+        "time": 1778155333.691391,
+        "idle": 104553197,
+        "total": 106091836
       },
       {
-        "time": 1777986104.0131962,
-        "idle": 37660416,
-        "total": 38364731
+        "time": 1778155406.1702547,
+        "idle": 104581655,
+        "total": 106120886
       },
       {
-        "time": 1777986104.2435038,
-        "idle": 37660483,
-        "total": 38364824
-      },
-      {
-        "time": 1777986134.3292487,
-        "idle": 37672146,
-        "total": 38376859
-      },
-      {
-        "time": 1777986404.730134,
-        "idle": 37775381,
-        "total": 38485003
-      },
-      {
-        "time": 1777986404.9980118,
-        "idle": 37775460,
-        "total": 38485113
+        "time": 1778155406.4475667,
+        "idle": 104581732,
+        "total": 106120999
       }
     ],
     "container_restarts": {
       "current_pids": [
-        "8161",
-        "533"
+        "91200",
+        "533",
+        "76571"
       ],
       "last_pids": [
         "533",
@@ -296,46 +237,73 @@
         "8161"
       ],
       "events": [
-        1777985516.7443006,
-        1777985533.3245828,
-        1777985551.246263,
-        1777985803.3931813,
-        1777985803.617869,
-        1777985833.8183055,
-        1777986104.021327,
-        1777986104.2525337,
-        1777986134.3370204,
-        1777986404.7390497,
-        1777986405.0070755
+        1778152027.4877753,
+        1778152096.79188,
+        1778152097.0572276,
+        1778152328.0715342,
+        1778152397.6462138,
+        1778152397.9087226,
+        1778152628.6239803,
+        1778152698.5981622,
+        1778152698.8932252,
+        1778152929.230148,
+        1778152999.5559442,
+        1778152999.9181614,
+        1778153229.809856,
+        1778153300.5742633,
+        1778153300.9031343,
+        1778153530.393328,
+        1778153601.4322681,
+        1778153601.7253664,
+        1778153830.9489567,
+        1778153902.2849169,
+        1778153902.5497804,
+        1778154131.5129757,
+        1778154203.048161,
+        1778154203.2882426,
+        1778154432.1064289,
+        1778154503.7954335,
+        1778154504.053918,
+        1778154732.6438303,
+        1778154804.591523,
+        1778154804.8649502,
+        1778155033.1669974,
+        1778155105.3883998,
+        1778155105.6280644,
+        1778155333.699536,
+        1778155406.1794677,
+        1778155406.4587967
       ]
     },
     "warning_buffer": [],
     "last_digest_date": null,
     "daily_spend": {
-      "2026-05-05": 37.40925510000005
+      "2026-05-05": 203.62081207199944,
+      "2026-05-06": 311.58771294799743,
+      "2026-05-07": 60.63239296399992
     },
     "employee_daily_spend": {
       "2026-05-05": {
-        "rahul_workspace": 0,
-        "naveen_workspace": 0,
-        "pooja_workspace": 0,
+        "rahul_workspace": 10.226027500000004,
+        "naveen_workspace": 1.814619072000002,
+        "pooja_workspace": 2.2284424,
         "akash_workspace": 0,
-        "nidhin_workspace": 0,
-        "gopika_workspace": 1.0048341999999997,
+        "nidhin_workspace": 3.9653219999999982,
+        "gopika_workspace": 2.9397038000000073,
         "communal_workspace": 0,
-        "omkar_workspace": 0.2915415,
+        "omkar_workspace": 3.2059557000000014,
         "nidhi_workspace": 0,
         "ashwin_workspace": 0,
         "shobha_workspace": 0,
-        "pramod_workspace": 0.46144560000000007,
+        "pramod_workspace": 0.7341179999999996,
         "ethan_workspace": 0,
         "manju_workspace": 0,
         "abhishek_workspace": 0,
         "nav_workspace": 0,
-        "arvind_workspace": 0,
+        "arvind_workspace": 7.397714199999996,
         "dipak_workspace": 0,
         "raghu_workspace": 0,
-        "rohit_workspace": 0,
+        "rohit_workspace": 6.108757800000005,
         "varsha_workspace": 0,
         "kailash_workspace": 0,
         "sagarkarpe_workspace": 21.334339449999995,
@@ -346,10 +314,92 @@
         "dhananjay_workspace": 0.05567704999999999,
         "vignesh_workspace": 0,
         "pawan_workspace": 0.29515920000000007,
+        "anupam_workspace": 4.994955,
+        "swapnil_workspace": 6.500387400000003,
+        "shivakumar_workspace": 90.59441474999994,
+        "jatin_workspace": 13.945703950000011,
+        "sagar_workspace": 27.279514799999976,
+        "akshay_workspace": 0,
+        "chris_workspace": 0,
+        "will_workspace": 0,
+        "neel_workspace": 0
+      },
+      "2026-05-06": {
+        "rahul_workspace": 41.056168949999986,
+        "naveen_workspace": 9.881285573999996,
+        "pooja_workspace": 0,
+        "akash_workspace": 0,
+        "nidhin_workspace": 1.869993,
+        "gopika_workspace": 0,
+        "communal_workspace": 0,
+        "omkar_workspace": 0,
+        "nidhi_workspace": 0,
+        "ashwin_workspace": 0,
+        "shobha_workspace": 0,
+        "pramod_workspace": 32.12800640000002,
+        "ethan_workspace": 0,
+        "manju_workspace": 0,
+        "abhishek_workspace": 0,
+        "nav_workspace": 0,
+        "arvind_workspace": 0.2784726,
+        "dipak_workspace": 0,
+        "raghu_workspace": 51.70159137400003,
+        "rohit_workspace": 0,
+        "varsha_workspace": 0,
+        "kailash_workspace": 0,
+        "sagarkarpe_workspace": 6.703506149999997,
+        "kristi_workspace": 0,
+        "prasad_workspace": 0,
+        "apurva_workspace": 0,
+        "shreyansh_workspace": 0,
+        "dhananjay_workspace": 12.944150750000023,
+        "vignesh_workspace": 0,
+        "pawan_workspace": 5.98265459999999,
+        "anupam_workspace": 16.063975800000005,
+        "swapnil_workspace": 36.51090455000003,
+        "shivakumar_workspace": 26.889482250000043,
+        "jatin_workspace": 42.63984144999996,
+        "sagar_workspace": 4.3166471999999985,
+        "akshay_workspace": 22.62103229999996,
+        "chris_workspace": 0,
+        "will_workspace": 0,
+        "neel_workspace": 0
+      },
+      "2026-05-07": {
+        "rahul_workspace": 0,
+        "naveen_workspace": 2.236193762,
+        "pooja_workspace": 4.160118950000001,
+        "akash_workspace": 0,
+        "nidhin_workspace": 0,
+        "gopika_workspace": 0.42830340000000006,
+        "communal_workspace": 0.2732784,
+        "omkar_workspace": 0,
+        "nidhi_workspace": 0,
+        "ashwin_workspace": 0,
+        "shobha_workspace": 0,
+        "pramod_workspace": 0.6340212000000002,
+        "ethan_workspace": 0,
+        "manju_workspace": 0,
+        "abhishek_workspace": 0,
+        "nav_workspace": 0,
+        "arvind_workspace": 0,
+        "dipak_workspace": 0,
+        "raghu_workspace": 2.7264129120000002,
+        "rohit_workspace": 19.269767400000006,
+        "varsha_workspace": 0,
+        "kailash_workspace": 0,
+        "sagarkarpe_workspace": 0,
+        "kristi_workspace": 0,
+        "prasad_workspace": 0,
+        "apurva_workspace": 0,
+        "shreyansh_workspace": 0,
+        "dhananjay_workspace": 9.234996450000002,
+        "vignesh_workspace": 0,
+        "pawan_workspace": 0,
         "anupam_workspace": 0,
-        "swapnil_workspace": 0.77758785,
-        "shivakumar_workspace": 5.42498975,
-        "jatin_workspace": 7.763680500000003,
+        "swapnil_workspace": 0,
+        "shivakumar_workspace": 0,
+        "jatin_workspace": 21.669300489999998,
         "sagar_workspace": 0,
         "akshay_workspace": 0,
         "chris_workspace": 0,
@@ -359,225 +409,193 @@
     }
   },
   "fixerResults": {
-    "fixer_time": "2026-05-05T18:36:44.804556+05:30",
-    "fixes_attempted": 21,
-    "fixes_success": 0,
+    "fixer_time": "2026-05-07T17:33:26.234331+05:30",
+    "fixes_attempted": 19,
+    "fixes_success": 2,
     "fixes_failed": 0,
-    "fixes_skipped": 21,
+    "fixes_skipped": 17,
     "details": [
       {
-        "id": "1b677774",
-        "timestamp": "2026-05-05T18:36:44.808122+05:30",
+        "id": "9e3947a8",
+        "timestamp": "2026-05-07T17:33:26.237793+05:30",
         "fix_type": "idle_session",
         "workspace": "rahul_workspace",
         "status": "skipped",
-        "message": "No idle sessions to mark",
+        "message": "No idle sessions to fix",
         "details": {}
       },
       {
-        "id": "99f39c4e",
-        "timestamp": "2026-05-05T18:36:44.810932+05:30",
-        "fix_type": "idle_session",
-        "workspace": "pooja_workspace",
-        "status": "skipped",
-        "message": "No idle sessions to mark",
-        "details": {}
-      },
-      {
-        "id": "f570839d",
-        "timestamp": "2026-05-05T18:36:44.812121+05:30",
+        "id": "25942428",
+        "timestamp": "2026-05-07T17:33:26.241016+05:30",
         "fix_type": "idle_session",
         "workspace": "akash_workspace",
         "status": "skipped",
-        "message": "No idle sessions to mark",
+        "message": "No idle sessions to fix",
         "details": {}
       },
       {
-        "id": "ef91d945",
-        "timestamp": "2026-05-05T18:36:44.814176+05:30",
+        "id": "f913eccc",
+        "timestamp": "2026-05-07T17:33:26.241999+05:30",
         "fix_type": "idle_session",
         "workspace": "nidhi_workspace",
         "status": "skipped",
-        "message": "No idle sessions to mark",
+        "message": "No idle sessions to fix",
         "details": {}
       },
       {
-        "id": "7c23a2e5",
-        "timestamp": "2026-05-05T18:36:44.815285+05:30",
+        "id": "6049064a",
+        "timestamp": "2026-05-07T17:33:26.243562+05:30",
+        "fix_type": "idle_session",
+        "workspace": "pramod_workspace",
+        "status": "skipped",
+        "message": "No idle sessions to fix",
+        "details": {}
+      },
+      {
+        "id": "f8c7c677",
+        "timestamp": "2026-05-07T17:33:26.244611+05:30",
         "fix_type": "idle_session",
         "workspace": "manju_workspace",
         "status": "skipped",
-        "message": "No idle sessions to mark",
+        "message": "No idle sessions to fix",
         "details": {}
       },
       {
-        "id": "1eb43633",
-        "timestamp": "2026-05-05T18:36:44.817181+05:30",
+        "id": "12100af2",
+        "timestamp": "2026-05-07T17:33:26.245577+05:30",
         "fix_type": "idle_session",
         "workspace": "nav_workspace",
         "status": "skipped",
-        "message": "No idle sessions to mark",
+        "message": "No idle sessions to fix",
         "details": {}
       },
       {
-        "id": "44c8572f",
-        "timestamp": "2026-05-05T18:36:44.819565+05:30",
-        "fix_type": "idle_session",
-        "workspace": "arvind_workspace",
-        "status": "skipped",
-        "message": "No idle sessions to mark",
-        "details": {}
-      },
-      {
-        "id": "0be90ce7",
-        "timestamp": "2026-05-05T18:36:44.823082+05:30",
+        "id": "64b5e6c1",
+        "timestamp": "2026-05-07T17:33:26.247893+05:30",
         "fix_type": "idle_session",
         "workspace": "dipak_workspace",
         "status": "skipped",
-        "message": "No idle sessions to mark",
+        "message": "No idle sessions to fix",
         "details": {}
       },
       {
-        "id": "e1ae73c2",
-        "timestamp": "2026-05-05T18:36:44.826225+05:30",
+        "id": "534ab745",
+        "timestamp": "2026-05-07T17:33:26.252095+05:30",
         "fix_type": "idle_session",
         "workspace": "raghu_workspace",
         "status": "skipped",
-        "message": "No idle sessions to mark",
+        "message": "No idle sessions to fix",
         "details": {}
       },
       {
-        "id": "148ac466",
-        "timestamp": "2026-05-05T18:36:44.827150+05:30",
-        "fix_type": "idle_session",
-        "workspace": "rohit_workspace",
-        "status": "skipped",
-        "message": "No idle sessions to mark",
-        "details": {}
-      },
-      {
-        "id": "eed4d446",
-        "timestamp": "2026-05-05T18:36:44.827900+05:30",
+        "id": "3de386a4",
+        "timestamp": "2026-05-07T17:33:26.253859+05:30",
         "fix_type": "idle_session",
         "workspace": "varsha_workspace",
         "status": "skipped",
-        "message": "No idle sessions to mark",
+        "message": "No idle sessions to fix",
         "details": {}
       },
       {
-        "id": "e9d610e6",
-        "timestamp": "2026-05-05T18:36:44.828750+05:30",
-        "fix_type": "idle_session",
-        "workspace": "sagarkarpe_workspace",
-        "status": "skipped",
-        "message": "No idle sessions to mark",
-        "details": {}
-      },
-      {
-        "id": "515955da",
-        "timestamp": "2026-05-05T18:36:44.829839+05:30",
+        "id": "0c83da55",
+        "timestamp": "2026-05-07T17:33:26.255189+05:30",
         "fix_type": "idle_session",
         "workspace": "kristi_workspace",
         "status": "skipped",
-        "message": "No idle sessions to mark",
+        "message": "No idle sessions to fix",
         "details": {}
       },
       {
-        "id": "c0e7bb35",
-        "timestamp": "2026-05-05T18:36:44.830646+05:30",
+        "id": "40979c87",
+        "timestamp": "2026-05-07T17:33:26.256267+05:30",
         "fix_type": "idle_session",
         "workspace": "apurva_workspace",
         "status": "skipped",
-        "message": "No idle sessions to mark",
+        "message": "No idle sessions to fix",
         "details": {}
       },
       {
-        "id": "26292ba3",
-        "timestamp": "2026-05-05T18:36:44.831388+05:30",
+        "id": "7d407e95",
+        "timestamp": "2026-05-07T17:33:26.257707+05:30",
         "fix_type": "idle_session",
         "workspace": "vignesh_workspace",
         "status": "skipped",
-        "message": "No idle sessions to mark",
+        "message": "No idle sessions to fix",
         "details": {}
       },
       {
-        "id": "10870eaa",
-        "timestamp": "2026-05-05T18:36:44.832215+05:30",
+        "id": "0a0751df",
+        "timestamp": "2026-05-07T17:33:26.258863+05:30",
         "fix_type": "idle_session",
-        "workspace": "anupam_workspace",
-        "status": "skipped",
-        "message": "No idle sessions to mark",
-        "details": {}
-      },
-      {
-        "id": "76475e08",
-        "timestamp": "2026-05-05T18:36:44.832621+05:30",
-        "fix_type": "token_flood",
         "workspace": "shivakumar_workspace",
         "status": "skipped",
-        "message": "No files needed compacting",
+        "message": "No idle sessions to fix",
         "details": {}
       },
       {
-        "id": "c9e2cf71",
-        "timestamp": "2026-05-05T18:36:44.832803+05:30",
-        "fix_type": "token_flood",
-        "workspace": "jatin_workspace",
-        "status": "skipped",
-        "message": "No files needed compacting",
-        "details": {}
-      },
-      {
-        "id": "9fbfe37a",
-        "timestamp": "2026-05-05T18:36:44.834727+05:30",
+        "id": "b8dd09de",
+        "timestamp": "2026-05-07T17:33:26.263297+05:30",
         "fix_type": "idle_session",
         "workspace": "sagar_workspace",
         "status": "skipped",
-        "message": "No idle sessions to mark",
+        "message": "No idle sessions to fix",
         "details": {}
       },
       {
-        "id": "45b5e7df",
-        "timestamp": "2026-05-05T18:36:44.837740+05:30",
+        "id": "735fb064",
+        "timestamp": "2026-05-07T17:33:26.264643+05:30",
+        "fix_type": "idle_session",
+        "workspace": "akshay_workspace",
+        "status": "skipped",
+        "message": "No idle sessions to fix",
+        "details": {}
+      },
+      {
+        "id": "0047520f",
+        "timestamp": "2026-05-07T17:33:26.268582+05:30",
         "fix_type": "idle_session",
         "workspace": "chris_workspace",
         "status": "skipped",
-        "message": "No idle sessions to mark",
+        "message": "No idle sessions to fix",
         "details": {}
       },
       {
-        "id": "0872c47d",
-        "timestamp": "2026-05-05T18:36:44.838709+05:30",
+        "id": "3b68cede",
+        "timestamp": "2026-05-07T17:33:26.270026+05:30",
         "fix_type": "idle_session",
         "workspace": "will_workspace",
         "status": "skipped",
-        "message": "No idle sessions to mark",
+        "message": "No idle sessions to fix",
         "details": {}
+      },
+      {
+        "id": "68f6f221",
+        "timestamp": "2026-05-07T17:33:26.272178+05:30",
+        "fix_type": "ram_high",
+        "workspace": "SYSTEM",
+        "status": "success",
+        "message": "RAM cleanup: freed ~0MB",
+        "details": {
+          "freed_mb": 0
+        }
+      },
+      {
+        "id": "facc1480",
+        "timestamp": "2026-05-07T17:33:26.274074+05:30",
+        "fix_type": "ram_high",
+        "workspace": "SYSTEM",
+        "status": "success",
+        "message": "RAM cleanup: freed ~0MB",
+        "details": {
+          "freed_mb": 0
+        }
       }
     ]
   },
   "fixerLog": [
     {
-      "id": "bb42b9a5",
-      "timestamp": "2026-05-05T18:31:44.091279+05:30",
-      "fix_type": "token_flood",
-      "workspace": "jatin_workspace",
-      "status": "started",
-      "message": "Compacting session files for jatin_workspace",
-      "details": {}
-    },
-    {
-      "id": "7fbef8ce",
-      "timestamp": "2026-05-05T18:31:44.091375+05:30",
-      "fix_type": "token_flood",
-      "workspace": "jatin_workspace",
-      "status": "skipped",
-      "message": "No files needed compacting",
-      "details": {}
-    },
-    {
-      "id": "dcd4e7a2",
-      "timestamp": "2026-05-05T18:31:44.091436+05:30",
+      "id": "3b859bdf",
+      "timestamp": "2026-05-07T17:28:25.459153+05:30",
       "fix_type": "idle_session",
       "workspace": "sagar_workspace",
       "status": "started",
@@ -585,17 +603,35 @@
       "details": {}
     },
     {
-      "id": "7e7180a9",
-      "timestamp": "2026-05-05T18:31:44.093190+05:30",
+      "id": "d99809c1",
+      "timestamp": "2026-05-07T17:28:25.461887+05:30",
       "fix_type": "idle_session",
       "workspace": "sagar_workspace",
       "status": "skipped",
-      "message": "No idle sessions to mark",
+      "message": "No idle sessions to fix",
       "details": {}
     },
     {
-      "id": "e95c5075",
-      "timestamp": "2026-05-05T18:31:44.093338+05:30",
+      "id": "5c2e8c6b",
+      "timestamp": "2026-05-07T17:28:25.462033+05:30",
+      "fix_type": "idle_session",
+      "workspace": "akshay_workspace",
+      "status": "started",
+      "message": "Marking idle sessions in akshay_workspace",
+      "details": {}
+    },
+    {
+      "id": "e673c00b",
+      "timestamp": "2026-05-07T17:28:25.462839+05:30",
+      "fix_type": "idle_session",
+      "workspace": "akshay_workspace",
+      "status": "skipped",
+      "message": "No idle sessions to fix",
+      "details": {}
+    },
+    {
+      "id": "d024d580",
+      "timestamp": "2026-05-07T17:28:25.462969+05:30",
       "fix_type": "idle_session",
       "workspace": "chris_workspace",
       "status": "started",
@@ -603,17 +639,17 @@
       "details": {}
     },
     {
-      "id": "e76e9c8e",
-      "timestamp": "2026-05-05T18:31:44.096044+05:30",
+      "id": "910bc1b1",
+      "timestamp": "2026-05-07T17:28:25.466013+05:30",
       "fix_type": "idle_session",
       "workspace": "chris_workspace",
       "status": "skipped",
-      "message": "No idle sessions to mark",
+      "message": "No idle sessions to fix",
       "details": {}
     },
     {
-      "id": "e4c28843",
-      "timestamp": "2026-05-05T18:31:44.096181+05:30",
+      "id": "4e955bb1",
+      "timestamp": "2026-05-07T17:28:25.466176+05:30",
       "fix_type": "idle_session",
       "workspace": "will_workspace",
       "status": "started",
@@ -621,17 +657,57 @@
       "details": {}
     },
     {
-      "id": "9f09bc9c",
-      "timestamp": "2026-05-05T18:31:44.096819+05:30",
+      "id": "646aac54",
+      "timestamp": "2026-05-07T17:28:25.466937+05:30",
       "fix_type": "idle_session",
       "workspace": "will_workspace",
       "status": "skipped",
-      "message": "No idle sessions to mark",
+      "message": "No idle sessions to fix",
       "details": {}
     },
     {
-      "id": "97deadd6",
-      "timestamp": "2026-05-05T18:36:44.804891+05:30",
+      "id": "45e53a90",
+      "timestamp": "2026-05-07T17:28:25.467063+05:30",
+      "fix_type": "ram_high",
+      "workspace": "SYSTEM",
+      "status": "started",
+      "message": "Attempting RAM cleanup",
+      "details": {}
+    },
+    {
+      "id": "2c1230f0",
+      "timestamp": "2026-05-07T17:28:25.468622+05:30",
+      "fix_type": "ram_high",
+      "workspace": "SYSTEM",
+      "status": "success",
+      "message": "RAM cleanup: freed ~0MB",
+      "details": {
+        "freed_mb": 0
+      }
+    },
+    {
+      "id": "add51664",
+      "timestamp": "2026-05-07T17:28:25.468757+05:30",
+      "fix_type": "ram_high",
+      "workspace": "SYSTEM",
+      "status": "started",
+      "message": "Attempting RAM cleanup",
+      "details": {}
+    },
+    {
+      "id": "47289c7e",
+      "timestamp": "2026-05-07T17:28:25.470133+05:30",
+      "fix_type": "ram_high",
+      "workspace": "SYSTEM",
+      "status": "success",
+      "message": "RAM cleanup: freed ~0MB",
+      "details": {
+        "freed_mb": 0
+      }
+    },
+    {
+      "id": "64511e3a",
+      "timestamp": "2026-05-07T17:33:26.234584+05:30",
       "fix_type": "idle_session",
       "workspace": "rahul_workspace",
       "status": "started",
@@ -639,35 +715,17 @@
       "details": {}
     },
     {
-      "id": "1b677774",
-      "timestamp": "2026-05-05T18:36:44.808122+05:30",
+      "id": "9e3947a8",
+      "timestamp": "2026-05-07T17:33:26.237793+05:30",
       "fix_type": "idle_session",
       "workspace": "rahul_workspace",
       "status": "skipped",
-      "message": "No idle sessions to mark",
+      "message": "No idle sessions to fix",
       "details": {}
     },
     {
-      "id": "f4516750",
-      "timestamp": "2026-05-05T18:36:44.808798+05:30",
-      "fix_type": "idle_session",
-      "workspace": "pooja_workspace",
-      "status": "started",
-      "message": "Marking idle sessions in pooja_workspace",
-      "details": {}
-    },
-    {
-      "id": "99f39c4e",
-      "timestamp": "2026-05-05T18:36:44.810932+05:30",
-      "fix_type": "idle_session",
-      "workspace": "pooja_workspace",
-      "status": "skipped",
-      "message": "No idle sessions to mark",
-      "details": {}
-    },
-    {
-      "id": "6d961938",
-      "timestamp": "2026-05-05T18:36:44.811154+05:30",
+      "id": "0d6e0007",
+      "timestamp": "2026-05-07T17:33:26.238879+05:30",
       "fix_type": "idle_session",
       "workspace": "akash_workspace",
       "status": "started",
@@ -675,17 +733,17 @@
       "details": {}
     },
     {
-      "id": "f570839d",
-      "timestamp": "2026-05-05T18:36:44.812121+05:30",
+      "id": "25942428",
+      "timestamp": "2026-05-07T17:33:26.241016+05:30",
       "fix_type": "idle_session",
       "workspace": "akash_workspace",
       "status": "skipped",
-      "message": "No idle sessions to mark",
+      "message": "No idle sessions to fix",
       "details": {}
     },
     {
-      "id": "d4a7c519",
-      "timestamp": "2026-05-05T18:36:44.812372+05:30",
+      "id": "498e5623",
+      "timestamp": "2026-05-07T17:33:26.241141+05:30",
       "fix_type": "idle_session",
       "workspace": "nidhi_workspace",
       "status": "started",
@@ -693,17 +751,35 @@
       "details": {}
     },
     {
-      "id": "ef91d945",
-      "timestamp": "2026-05-05T18:36:44.814176+05:30",
+      "id": "f913eccc",
+      "timestamp": "2026-05-07T17:33:26.241999+05:30",
       "fix_type": "idle_session",
       "workspace": "nidhi_workspace",
       "status": "skipped",
-      "message": "No idle sessions to mark",
+      "message": "No idle sessions to fix",
       "details": {}
     },
     {
-      "id": "2a92604b",
-      "timestamp": "2026-05-05T18:36:44.814331+05:30",
+      "id": "c38e8332",
+      "timestamp": "2026-05-07T17:33:26.242119+05:30",
+      "fix_type": "idle_session",
+      "workspace": "pramod_workspace",
+      "status": "started",
+      "message": "Marking idle sessions in pramod_workspace",
+      "details": {}
+    },
+    {
+      "id": "6049064a",
+      "timestamp": "2026-05-07T17:33:26.243562+05:30",
+      "fix_type": "idle_session",
+      "workspace": "pramod_workspace",
+      "status": "skipped",
+      "message": "No idle sessions to fix",
+      "details": {}
+    },
+    {
+      "id": "5fb1f7aa",
+      "timestamp": "2026-05-07T17:33:26.243680+05:30",
       "fix_type": "idle_session",
       "workspace": "manju_workspace",
       "status": "started",
@@ -711,17 +787,17 @@
       "details": {}
     },
     {
-      "id": "7c23a2e5",
-      "timestamp": "2026-05-05T18:36:44.815285+05:30",
+      "id": "f8c7c677",
+      "timestamp": "2026-05-07T17:33:26.244611+05:30",
       "fix_type": "idle_session",
       "workspace": "manju_workspace",
       "status": "skipped",
-      "message": "No idle sessions to mark",
+      "message": "No idle sessions to fix",
       "details": {}
     },
     {
-      "id": "29027caa",
-      "timestamp": "2026-05-05T18:36:44.815435+05:30",
+      "id": "c99ec7fa",
+      "timestamp": "2026-05-07T17:33:26.244735+05:30",
       "fix_type": "idle_session",
       "workspace": "nav_workspace",
       "status": "started",
@@ -729,35 +805,17 @@
       "details": {}
     },
     {
-      "id": "1eb43633",
-      "timestamp": "2026-05-05T18:36:44.817181+05:30",
+      "id": "12100af2",
+      "timestamp": "2026-05-07T17:33:26.245577+05:30",
       "fix_type": "idle_session",
       "workspace": "nav_workspace",
       "status": "skipped",
-      "message": "No idle sessions to mark",
+      "message": "No idle sessions to fix",
       "details": {}
     },
     {
-      "id": "4e4fd44a",
-      "timestamp": "2026-05-05T18:36:44.818250+05:30",
-      "fix_type": "idle_session",
-      "workspace": "arvind_workspace",
-      "status": "started",
-      "message": "Marking idle sessions in arvind_workspace",
-      "details": {}
-    },
-    {
-      "id": "44c8572f",
-      "timestamp": "2026-05-05T18:36:44.819565+05:30",
-      "fix_type": "idle_session",
-      "workspace": "arvind_workspace",
-      "status": "skipped",
-      "message": "No idle sessions to mark",
-      "details": {}
-    },
-    {
-      "id": "4c05ffd4",
-      "timestamp": "2026-05-05T18:36:44.820654+05:30",
+      "id": "2945fd77",
+      "timestamp": "2026-05-07T17:33:26.245710+05:30",
       "fix_type": "idle_session",
       "workspace": "dipak_workspace",
       "status": "started",
@@ -765,17 +823,17 @@
       "details": {}
     },
     {
-      "id": "0be90ce7",
-      "timestamp": "2026-05-05T18:36:44.823082+05:30",
+      "id": "64b5e6c1",
+      "timestamp": "2026-05-07T17:33:26.247893+05:30",
       "fix_type": "idle_session",
       "workspace": "dipak_workspace",
       "status": "skipped",
-      "message": "No idle sessions to mark",
+      "message": "No idle sessions to fix",
       "details": {}
     },
     {
-      "id": "f4be3579",
-      "timestamp": "2026-05-05T18:36:44.823269+05:30",
+      "id": "f7177718",
+      "timestamp": "2026-05-07T17:33:26.248068+05:30",
       "fix_type": "idle_session",
       "workspace": "raghu_workspace",
       "status": "started",
@@ -783,35 +841,17 @@
       "details": {}
     },
     {
-      "id": "e1ae73c2",
-      "timestamp": "2026-05-05T18:36:44.826225+05:30",
+      "id": "534ab745",
+      "timestamp": "2026-05-07T17:33:26.252095+05:30",
       "fix_type": "idle_session",
       "workspace": "raghu_workspace",
       "status": "skipped",
-      "message": "No idle sessions to mark",
+      "message": "No idle sessions to fix",
       "details": {}
     },
     {
-      "id": "ad6e6f61",
-      "timestamp": "2026-05-05T18:36:44.826393+05:30",
-      "fix_type": "idle_session",
-      "workspace": "rohit_workspace",
-      "status": "started",
-      "message": "Marking idle sessions in rohit_workspace",
-      "details": {}
-    },
-    {
-      "id": "148ac466",
-      "timestamp": "2026-05-05T18:36:44.827150+05:30",
-      "fix_type": "idle_session",
-      "workspace": "rohit_workspace",
-      "status": "skipped",
-      "message": "No idle sessions to mark",
-      "details": {}
-    },
-    {
-      "id": "1d9ac9f3",
-      "timestamp": "2026-05-05T18:36:44.827242+05:30",
+      "id": "fdb69e4c",
+      "timestamp": "2026-05-07T17:33:26.252818+05:30",
       "fix_type": "idle_session",
       "workspace": "varsha_workspace",
       "status": "started",
@@ -819,35 +859,17 @@
       "details": {}
     },
     {
-      "id": "eed4d446",
-      "timestamp": "2026-05-05T18:36:44.827900+05:30",
+      "id": "3de386a4",
+      "timestamp": "2026-05-07T17:33:26.253859+05:30",
       "fix_type": "idle_session",
       "workspace": "varsha_workspace",
       "status": "skipped",
-      "message": "No idle sessions to mark",
+      "message": "No idle sessions to fix",
       "details": {}
     },
     {
-      "id": "4136fe52",
-      "timestamp": "2026-05-05T18:36:44.828006+05:30",
-      "fix_type": "idle_session",
-      "workspace": "sagarkarpe_workspace",
-      "status": "started",
-      "message": "Marking idle sessions in sagarkarpe_workspace",
-      "details": {}
-    },
-    {
-      "id": "e9d610e6",
-      "timestamp": "2026-05-05T18:36:44.828750+05:30",
-      "fix_type": "idle_session",
-      "workspace": "sagarkarpe_workspace",
-      "status": "skipped",
-      "message": "No idle sessions to mark",
-      "details": {}
-    },
-    {
-      "id": "d8fc7081",
-      "timestamp": "2026-05-05T18:36:44.828878+05:30",
+      "id": "ae22468d",
+      "timestamp": "2026-05-07T17:33:26.253985+05:30",
       "fix_type": "idle_session",
       "workspace": "kristi_workspace",
       "status": "started",
@@ -855,17 +877,17 @@
       "details": {}
     },
     {
-      "id": "515955da",
-      "timestamp": "2026-05-05T18:36:44.829839+05:30",
+      "id": "0c83da55",
+      "timestamp": "2026-05-07T17:33:26.255189+05:30",
       "fix_type": "idle_session",
       "workspace": "kristi_workspace",
       "status": "skipped",
-      "message": "No idle sessions to mark",
+      "message": "No idle sessions to fix",
       "details": {}
     },
     {
-      "id": "60f2e10c",
-      "timestamp": "2026-05-05T18:36:44.829950+05:30",
+      "id": "c8ed3781",
+      "timestamp": "2026-05-07T17:33:26.255318+05:30",
       "fix_type": "idle_session",
       "workspace": "apurva_workspace",
       "status": "started",
@@ -873,17 +895,17 @@
       "details": {}
     },
     {
-      "id": "c0e7bb35",
-      "timestamp": "2026-05-05T18:36:44.830646+05:30",
+      "id": "40979c87",
+      "timestamp": "2026-05-07T17:33:26.256267+05:30",
       "fix_type": "idle_session",
       "workspace": "apurva_workspace",
       "status": "skipped",
-      "message": "No idle sessions to mark",
+      "message": "No idle sessions to fix",
       "details": {}
     },
     {
-      "id": "9521bb1a",
-      "timestamp": "2026-05-05T18:36:44.830768+05:30",
+      "id": "c3d6a87b",
+      "timestamp": "2026-05-07T17:33:26.256403+05:30",
       "fix_type": "idle_session",
       "workspace": "vignesh_workspace",
       "status": "started",
@@ -891,71 +913,35 @@
       "details": {}
     },
     {
-      "id": "26292ba3",
-      "timestamp": "2026-05-05T18:36:44.831388+05:30",
+      "id": "7d407e95",
+      "timestamp": "2026-05-07T17:33:26.257707+05:30",
       "fix_type": "idle_session",
       "workspace": "vignesh_workspace",
       "status": "skipped",
-      "message": "No idle sessions to mark",
+      "message": "No idle sessions to fix",
       "details": {}
     },
     {
-      "id": "0e77cd00",
-      "timestamp": "2026-05-05T18:36:44.831510+05:30",
+      "id": "192bf601",
+      "timestamp": "2026-05-07T17:33:26.257818+05:30",
       "fix_type": "idle_session",
-      "workspace": "anupam_workspace",
-      "status": "started",
-      "message": "Marking idle sessions in anupam_workspace",
-      "details": {}
-    },
-    {
-      "id": "10870eaa",
-      "timestamp": "2026-05-05T18:36:44.832215+05:30",
-      "fix_type": "idle_session",
-      "workspace": "anupam_workspace",
-      "status": "skipped",
-      "message": "No idle sessions to mark",
-      "details": {}
-    },
-    {
-      "id": "74ff4fdb",
-      "timestamp": "2026-05-05T18:36:44.832334+05:30",
-      "fix_type": "token_flood",
       "workspace": "shivakumar_workspace",
       "status": "started",
-      "message": "Compacting session files for shivakumar_workspace",
+      "message": "Marking idle sessions in shivakumar_workspace",
       "details": {}
     },
     {
-      "id": "76475e08",
-      "timestamp": "2026-05-05T18:36:44.832621+05:30",
-      "fix_type": "token_flood",
+      "id": "0a0751df",
+      "timestamp": "2026-05-07T17:33:26.258863+05:30",
+      "fix_type": "idle_session",
       "workspace": "shivakumar_workspace",
       "status": "skipped",
-      "message": "No files needed compacting",
+      "message": "No idle sessions to fix",
       "details": {}
     },
     {
-      "id": "a854cd09",
-      "timestamp": "2026-05-05T18:36:44.832711+05:30",
-      "fix_type": "token_flood",
-      "workspace": "jatin_workspace",
-      "status": "started",
-      "message": "Compacting session files for jatin_workspace",
-      "details": {}
-    },
-    {
-      "id": "c9e2cf71",
-      "timestamp": "2026-05-05T18:36:44.832803+05:30",
-      "fix_type": "token_flood",
-      "workspace": "jatin_workspace",
-      "status": "skipped",
-      "message": "No files needed compacting",
-      "details": {}
-    },
-    {
-      "id": "ed577a35",
-      "timestamp": "2026-05-05T18:36:44.832866+05:30",
+      "id": "9d1233e7",
+      "timestamp": "2026-05-07T17:33:26.258995+05:30",
       "fix_type": "idle_session",
       "workspace": "sagar_workspace",
       "status": "started",
@@ -963,17 +949,35 @@
       "details": {}
     },
     {
-      "id": "9fbfe37a",
-      "timestamp": "2026-05-05T18:36:44.834727+05:30",
+      "id": "b8dd09de",
+      "timestamp": "2026-05-07T17:33:26.263297+05:30",
       "fix_type": "idle_session",
       "workspace": "sagar_workspace",
       "status": "skipped",
-      "message": "No idle sessions to mark",
+      "message": "No idle sessions to fix",
       "details": {}
     },
     {
-      "id": "ec281240",
-      "timestamp": "2026-05-05T18:36:44.834899+05:30",
+      "id": "0d474d83",
+      "timestamp": "2026-05-07T17:33:26.263463+05:30",
+      "fix_type": "idle_session",
+      "workspace": "akshay_workspace",
+      "status": "started",
+      "message": "Marking idle sessions in akshay_workspace",
+      "details": {}
+    },
+    {
+      "id": "735fb064",
+      "timestamp": "2026-05-07T17:33:26.264643+05:30",
+      "fix_type": "idle_session",
+      "workspace": "akshay_workspace",
+      "status": "skipped",
+      "message": "No idle sessions to fix",
+      "details": {}
+    },
+    {
+      "id": "7b2b824e",
+      "timestamp": "2026-05-07T17:33:26.264774+05:30",
       "fix_type": "idle_session",
       "workspace": "chris_workspace",
       "status": "started",
@@ -981,17 +985,17 @@
       "details": {}
     },
     {
-      "id": "45b5e7df",
-      "timestamp": "2026-05-05T18:36:44.837740+05:30",
+      "id": "0047520f",
+      "timestamp": "2026-05-07T17:33:26.268582+05:30",
       "fix_type": "idle_session",
       "workspace": "chris_workspace",
       "status": "skipped",
-      "message": "No idle sessions to mark",
+      "message": "No idle sessions to fix",
       "details": {}
     },
     {
-      "id": "aa7c312e",
-      "timestamp": "2026-05-05T18:36:44.837984+05:30",
+      "id": "ee132a4b",
+      "timestamp": "2026-05-07T17:33:26.268782+05:30",
       "fix_type": "idle_session",
       "workspace": "will_workspace",
       "status": "started",
@@ -999,13 +1003,53 @@
       "details": {}
     },
     {
-      "id": "0872c47d",
-      "timestamp": "2026-05-05T18:36:44.838709+05:30",
+      "id": "3b68cede",
+      "timestamp": "2026-05-07T17:33:26.270026+05:30",
       "fix_type": "idle_session",
       "workspace": "will_workspace",
       "status": "skipped",
-      "message": "No idle sessions to mark",
+      "message": "No idle sessions to fix",
       "details": {}
+    },
+    {
+      "id": "dd65b456",
+      "timestamp": "2026-05-07T17:33:26.270189+05:30",
+      "fix_type": "ram_high",
+      "workspace": "SYSTEM",
+      "status": "started",
+      "message": "Attempting RAM cleanup",
+      "details": {}
+    },
+    {
+      "id": "68f6f221",
+      "timestamp": "2026-05-07T17:33:26.272178+05:30",
+      "fix_type": "ram_high",
+      "workspace": "SYSTEM",
+      "status": "success",
+      "message": "RAM cleanup: freed ~0MB",
+      "details": {
+        "freed_mb": 0
+      }
+    },
+    {
+      "id": "5c47f8fe",
+      "timestamp": "2026-05-07T17:33:26.272338+05:30",
+      "fix_type": "ram_high",
+      "workspace": "SYSTEM",
+      "status": "started",
+      "message": "Attempting RAM cleanup",
+      "details": {}
+    },
+    {
+      "id": "facc1480",
+      "timestamp": "2026-05-07T17:33:26.274074+05:30",
+      "fix_type": "ram_high",
+      "workspace": "SYSTEM",
+      "status": "success",
+      "message": "RAM cleanup: freed ~0MB",
+      "details": {
+        "freed_mb": 0
+      }
     }
   ]
 }
