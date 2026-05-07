@@ -2,8 +2,6 @@
 
 import { useState } from 'react';
 import jsPDF from 'jspdf';
-import autoTable from 'jspdf-autotable';
-import type { UserOptions } from 'jspdf-autotable';
 
 interface Employee {
   name: string;
@@ -27,43 +25,39 @@ interface Props {
   viewMode: 'weekly' | 'total';
 }
 
+function getBadge(hours: number): string {
+  if (hours >= 20) return 'Pioneer';
+  if (hours >= 15) return 'Voltage';
+  if (hours >= 10) return 'Sniper';
+  if (hours >= 5) return 'Diamond';
+  return 'Flame';
+}
+
+function getBadgeColor(hours: number): [number, number, number] {
+  if (hours >= 20) return [168, 85, 247];   // purple
+  if (hours >= 15) return [59, 130, 246];    // blue
+  if (hours >= 10) return [34, 197, 94];     // green
+  if (hours >= 5) return [234, 179, 8];      // yellow
+  return [156, 163, 175];                     // grey
+}
+
+function fmtTokens(n: number): string {
+  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`;
+  if (n >= 1_000) return `${(n / 1_000).toFixed(0)}K`;
+  return String(n);
+}
+
 export default function ExportPDFButton({ employees, viewMode }: Props) {
   const [exporting, setExporting] = useState(false);
 
   const handleExport = () => {
     setExporting(true);
     try {
-      const doc = new jsPDF({ orientation: 'landscape', unit: 'mm', format: 'a4' });
-
+      const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
       const pageW = doc.internal.pageSize.getWidth();
-      const now = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Calcutta' });
       const isWeekly = viewMode === 'weekly';
+      const now = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Calcutta' });
 
-      // ── Header gradient bar ──
-      doc.setFillColor(30, 27, 75); // dark purple
-      doc.rect(0, 0, pageW, 32, 'F');
-
-      // Gradient overlay
-      doc.setFillColor(88, 28, 135);
-      doc.rect(0, 0, pageW * 0.6, 32, 'F');
-
-      // Title
-      doc.setTextColor(255, 255, 255);
-      doc.setFontSize(22);
-      doc.setFont('helvetica', 'bold');
-      doc.text('Livio AI Dashboard', 12, 16);
-
-      doc.setFontSize(11);
-      doc.setFont('helvetica', 'normal');
-      doc.setTextColor(196, 181, 253);
-      doc.text(`HR Analytics Report — ${isWeekly ? 'Weekly' : 'All Time'}`, 12, 24);
-
-      // Timestamp
-      doc.setFontSize(9);
-      doc.setTextColor(168, 162, 200);
-      doc.text(`Generated: ${now} IST`, pageW - 12, 24, { align: 'right' });
-
-      // ── Summary Cards ──
       const totalEmp = employees.length;
       const totalHrs = isWeekly
         ? employees.reduce((a, e) => a + e.weeklyHours, 0)
@@ -72,120 +66,233 @@ export default function ExportPDFButton({ employees, viewMode }: Props) {
       const totalCost = isWeekly
         ? employees.reduce((a, e) => a + e.weeklyCost, 0)
         : employees.reduce((a, e) => a + e.totalCost, 0);
-      const savedVsChatGPT = (totalEmp * 30) - totalCost;
+      const savedVsChatGPT = Math.max(0, (totalEmp * 30) - totalCost);
 
-      const cardY = 37;
-      const cardW = (pageW - 24 - 12) / 4;
-      const cards = [
-        { label: 'Employees', value: String(totalEmp), color: [59, 130, 246] },
-        { label: isWeekly ? 'Weekly Hours' : 'Total Hours', value: totalHrs.toFixed(1), color: [34, 197, 94] },
-        { label: 'Goal Met (10hr)', value: `${goalMet}/${totalEmp}`, color: [234, 179, 8] },
-        { label: 'Cost', value: `$${totalCost.toFixed(2)}`, color: [251, 191, 36] },
-      ];
-
-      cards.forEach((card, i) => {
-        const x = 12 + i * (cardW + 4);
-        // Card background
-        doc.setFillColor(30, 27, 75);
-        doc.roundedRect(x, cardY, cardW, 18, 2, 2, 'F');
-        // Color accent bar at top
-        doc.setFillColor(card.color[0], card.color[1], card.color[2]);
-        doc.rect(x, cardY, cardW, 1.5, 'F');
-        // Value
-        doc.setFontSize(16);
-        doc.setFont('helvetica', 'bold');
-        doc.setTextColor(255, 255, 255);
-        doc.text(card.value, x + cardW / 2, cardY + 10, { align: 'center' });
-        // Label
-        doc.setFontSize(8);
-        doc.setFont('helvetica', 'normal');
-        doc.setTextColor(168, 162, 200);
-        doc.text(card.label, x + cardW / 2, cardY + 15.5, { align: 'center' });
-      });
-
-      // ── Savings banner ──
-      const bannerY = cardY + 22;
-      doc.setFillColor(34, 197, 94, 0.15);
-      doc.roundedRect(12, bannerY, pageW - 24, 10, 2, 2, 'F');
-      doc.setFontSize(10);
-      doc.setFont('helvetica', 'bold');
-      doc.setTextColor(34, 197, 94);
-      doc.text(`💰 Saved $${savedVsChatGPT.toFixed(2)} vs ChatGPT Team ($30/user/mo)`, pageW / 2, bannerY + 6.5, { align: 'center' });
-
-      // ── Employee Table ──
       const sorted = isWeekly
         ? [...employees].sort((a, b) => b.weeklyHours - a.weeklyHours)
         : [...employees].sort((a, b) => b.estimatedHours - a.estimatedHours);
 
-      const tableData = sorted.map((emp, idx) => {
+      // ══════════════════════════════════════
+      // PAGE 1: COVER + SUMMARY
+      // ══════════════════════════════════════
+
+      // Dark header block
+      doc.setFillColor(30, 27, 75);
+      doc.rect(0, 0, pageW, 60, 'F');
+
+      // Title
+      doc.setTextColor(255, 255, 255);
+      doc.setFontSize(28);
+      doc.setFont('helvetica', 'bold');
+      doc.text('Livio AI Dashboard', pageW / 2, 28, { align: 'center' });
+
+      // Subtitle
+      doc.setFontSize(13);
+      doc.setFont('helvetica', 'normal');
+      doc.setTextColor(196, 181, 253);
+      doc.text(`HR Analytics Report  |  ${isWeekly ? 'Weekly' : 'All Time'}`, pageW / 2, 40, { align: 'center' });
+
+      // Date
+      doc.setFontSize(10);
+      doc.setTextColor(148, 140, 190);
+      doc.text(`Generated: ${now} IST`, pageW / 2, 50, { align: 'center' });
+
+      // Summary section
+      let y = 72;
+
+      doc.setFontSize(16);
+      doc.setFont('helvetica', 'bold');
+      doc.setTextColor(30, 27, 75);
+      doc.text('Summary', 20, y);
+
+      y += 10;
+      doc.setFontSize(11);
+      doc.setFont('helvetica', 'normal');
+      doc.setTextColor(60, 60, 80);
+
+      const summaryLines = [
+        `${totalEmp} employees active on OpenClaw`,
+        `${totalHrs.toFixed(1)} ${isWeekly ? 'weekly' : 'total'} hours logged`,
+        `${goalMet} out of ${totalEmp} employees hit the 10-hour goal`,
+        `$${totalCost.toFixed(2)} total cost  |  $${savedVsChatGPT.toFixed(2)} saved vs ChatGPT Team ($30/user/mo)`,
+      ];
+
+      summaryLines.forEach(line => {
+        doc.setFillColor(245, 243, 255);
+        doc.roundedRect(20, y - 5, pageW - 40, 10, 2, 2, 'F');
+        doc.setTextColor(60, 60, 80);
+        doc.text(line, 25, y + 1.5);
+        y += 14;
+      });
+
+      // Goal overview
+      y += 6;
+      doc.setFontSize(16);
+      doc.setFont('helvetica', 'bold');
+      doc.setTextColor(30, 27, 75);
+      doc.text('Goal Overview', 20, y);
+
+      y += 10;
+      const goalPct = totalEmp > 0 ? Math.round((goalMet / totalEmp) * 100) : 0;
+
+      // Progress bar background
+      doc.setFillColor(230, 230, 240);
+      doc.roundedRect(20, y, pageW - 40, 8, 4, 4, 'F');
+
+      // Progress bar fill
+      const barW = (pageW - 40) * (goalPct / 100);
+      if (barW > 0) {
+        doc.setFillColor(168, 85, 247);
+        doc.roundedRect(20, y, Math.max(barW, 4), 8, 4, 4, 'F');
+      }
+
+      // Percentage text
+      doc.setFontSize(10);
+      doc.setFont('helvetica', 'bold');
+      doc.setTextColor(255, 255, 255);
+      doc.text(`${goalPct}%`, 20 + barW / 2, y + 5.5, { align: 'center' });
+
+      y += 14;
+      doc.setFont('helvetica', 'normal');
+      doc.setTextColor(100, 100, 120);
+      doc.setFontSize(10);
+      doc.text(`${goalMet} of ${totalEmp} employees reached the 10-hour weekly goal`, 20, y);
+
+      // ══════════════════════════════════════
+      // PAGE 2: TOP PERFORMERS
+      // ══════════════════════════════════════
+      doc.addPage();
+
+      y = 20;
+      doc.setFillColor(30, 27, 75);
+      doc.setTextColor(255, 255, 255);
+      doc.setFontSize(20);
+      doc.setFont('helvetica', 'bold');
+      doc.rect(0, 0, pageW, 30, 'F');
+      doc.text('Top Performers', pageW / 2, 18, { align: 'center' });
+
+      y = 40;
+      const top10 = sorted.slice(0, 10);
+
+      top10.forEach((emp, idx) => {
         const hours = isWeekly ? emp.weeklyHours : emp.estimatedHours;
         const tokens = isWeekly ? emp.weeklyTokens : emp.totalTokens;
         const cost = isWeekly ? emp.weeklyCost : emp.totalCost;
-        const badge = hours >= 20 ? '🚀 Pioneer' : hours >= 15 ? '⚡ Voltage' : hours >= 10 ? '🎯 Sniper' : hours >= 5 ? '💎 Diamond' : '🔥 Flame';
-        const goal = hours >= 10 ? '✅' : '❌';
+        const badge = getBadge(hours);
+        const color = getBadgeColor(hours);
+        const goalStatus = hours >= 10 ? 'Goal Met' : 'Below Goal';
 
-        return [
-          String(idx + 1),
-          emp.name,
-          badge,
-          hours.toFixed(1),
-          `${((hours / 10) * 100).toFixed(0)}%`,
-          goal,
-          tokens > 1000000 ? `${(tokens / 1000000).toFixed(1)}M` : `${(tokens / 1000).toFixed(0)}k`,
-          `$${cost.toFixed(2)}`,
-          String(emp.sessionCount),
-        ];
+        // Rank number circle
+        doc.setFillColor(color[0], color[1], color[2]);
+        doc.circle(28, y + 3, 5, 'F');
+        doc.setTextColor(255, 255, 255);
+        doc.setFontSize(9);
+        doc.setFont('helvetica', 'bold');
+        doc.text(String(idx + 1), 28, y + 5.5, { align: 'center' });
+
+        // Name
+        doc.setTextColor(30, 27, 75);
+        doc.setFontSize(13);
+        doc.setFont('helvetica', 'bold');
+        doc.text(emp.name, 38, y + 2);
+
+        // Badge tag
+        const badgeX = 38 + doc.getTextWidth(emp.name) + 4;
+        doc.setFillColor(color[0], color[1], color[2]);
+        const badgeW = doc.getTextWidth(badge) + 8;
+        doc.roundedRect(badgeX, y - 3, badgeW, 7, 2, 2, 'F');
+        doc.setTextColor(255, 255, 255);
+        doc.setFontSize(8);
+        doc.setFont('helvetica', 'bold');
+        doc.text(badge, badgeX + 4, y + 1.5);
+
+        // Stats line
+        doc.setFontSize(10);
+        doc.setFont('helvetica', 'normal');
+        doc.setTextColor(100, 100, 120);
+        doc.text(`${hours.toFixed(1)} hrs  |  ${fmtTokens(tokens)} tokens  |  $${cost.toFixed(2)}  |  ${goalStatus}`, 38, y + 10);
+
+        // Separator
+        if (idx < top10.length - 1) {
+          doc.setDrawColor(230, 230, 240);
+          doc.setLineWidth(0.3);
+          doc.line(38, y + 15, pageW - 20, y + 15);
+        }
+
+        y += 22;
       });
 
-      autoTable(doc, {
-        startY: bannerY + 14,
-        head: [['#', 'Employee', 'Badge', 'Hours', 'Progress', '10hr Goal', 'Tokens', 'Cost', 'Sessions']],
-        body: tableData,
-        theme: 'plain',
-        styles: {
-          fontSize: 9,
-          cellPadding: 3,
-          textColor: [196, 181, 253],
-          lineColor: [88, 28, 135],
-          lineWidth: 0.2,
-        },
-        headStyles: {
-          fillColor: [30, 27, 75],
-          textColor: [196, 181, 253],
-          fontStyle: 'bold',
-          fontSize: 9,
-        },
-        alternateRowStyles: {
-          fillColor: [20, 18, 50],
-        },
-        columnStyles: {
-          0: { cellWidth: 10, halign: 'center' },
-          4: { halign: 'center' },
-          5: { halign: 'center' },
-          7: { textColor: [251, 191, 36] },
-        },
-        didDrawCell: (data: any) => {
-          // Highlight power users (10+ hours) with left border
-          if (data.section === 'body') {
-            const hours = parseFloat(String(data.row.raw[3]));
-            if (hours >= 10 && data.column.index === 0) {
-              const { cell } = data;
-              doc.setDrawColor(168, 85, 247);
-              doc.setLineWidth(1);
-              doc.line(cell.x, cell.y, cell.x, cell.y + cell.height);
-            }
-          }
-        },
-      } as any);
+      // ══════════════════════════════════════
+      // PAGE 3: ALL EMPLOYEES
+      // ══════════════════════════════════════
+      doc.addPage();
 
-      // ── Footer ──
-      const pageH = doc.internal.pageSize.getHeight();
+      y = 20;
       doc.setFillColor(30, 27, 75);
-      doc.rect(0, pageH - 10, pageW, 10, 'F');
-      doc.setFontSize(7);
-      doc.setTextColor(168, 162, 200);
-      doc.text('Livio AI · OpenClaw Dashboard · Confidential', 12, pageH - 4);
-      doc.text(`Page 1 of 1 · ${now}`, pageW - 12, pageH - 4, { align: 'right' });
+      doc.setTextColor(255, 255, 255);
+      doc.setFontSize(20);
+      doc.setFont('helvetica', 'bold');
+      doc.rect(0, 0, pageW, 30, 'F');
+      doc.text('All Employees', pageW / 2, 18, { align: 'center' });
+
+      y = 40;
+
+      // Two-column layout
+      const colW = (pageW - 40) / 2;
+      const leftX = 20;
+      const rightX = 20 + colW + 10;
+
+      sorted.forEach((emp, idx) => {
+        const hours = isWeekly ? emp.weeklyHours : emp.estimatedHours;
+        const col = idx % 2 === 0 ? leftX : rightX;
+        const row = Math.floor(idx / 2);
+
+        // Recalculate y based on row
+        const rowY = 40 + row * 12;
+
+        // If we'd go off page, add new page
+        if (rowY > 270 && col === leftX) {
+          doc.addPage();
+          y = 20;
+          doc.setFillColor(30, 27, 75);
+          doc.rect(0, 0, pageW, 30, 'F');
+          doc.setTextColor(255, 255, 255);
+          doc.setFontSize(16);
+          doc.setFont('helvetica', 'bold');
+          doc.text('All Employees (continued)', pageW / 2, 18, { align: 'center' });
+        }
+
+        const actualY = rowY > 270 ? 40 + (row - Math.floor((270 - 40) / 12)) * 12 : rowY;
+
+        // Name
+        doc.setTextColor(30, 27, 75);
+        doc.setFontSize(10);
+        doc.setFont('helvetica', 'bold');
+        doc.text(emp.name, col, actualY);
+
+        // Hours
+        const nameW = doc.getTextWidth(emp.name);
+        const hoursColor = hours >= 10 ? [34, 197, 94] : [156, 163, 175];
+        doc.setTextColor(hoursColor[0], hoursColor[1], hoursColor[2]);
+        doc.setFont('helvetica', 'normal');
+        doc.setFontSize(9);
+        doc.text(`${hours.toFixed(1)} hrs`, col + nameW + 4, actualY);
+      });
+
+      // ══════════════════════════════════════
+      // FOOTER on every page
+      // ══════════════════════════════════════
+      const totalPages = doc.getNumberOfPages();
+      for (let i = 1; i <= totalPages; i++) {
+        doc.setPage(i);
+        const pageH = doc.internal.pageSize.getHeight();
+        doc.setFillColor(30, 27, 75);
+        doc.rect(0, pageH - 8, pageW, 8, 'F');
+        doc.setFontSize(7);
+        doc.setTextColor(196, 181, 253);
+        doc.text('Livio AI  |  Confidential', 20, pageH - 3);
+        doc.text(`Page ${i} of ${totalPages}  |  ${now}`, pageW - 20, pageH - 3, { align: 'right' });
+      }
 
       // Save
       const filename = `livio-hr-report-${isWeekly ? 'weekly' : 'alltime'}-${new Date().toISOString().slice(0, 10)}.pdf`;
@@ -212,7 +319,7 @@ export default function ExportPDFButton({ employees, viewMode }: Props) {
           Generating...
         </>
       ) : (
-        <>📄 Export to PDF</>
+        <>Export to PDF</>
       )}
     </button>
   );

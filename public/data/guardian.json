@@ -1,195 +1,195 @@
 {
-  "scan_time": "2026-05-07T17:38:27.362783+05:30",
+  "scan_time": "2026-05-07T18:03:32.246727+05:30",
   "workspaces_scanned": 39,
   "incidents": [
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "rahul_workspace",
-      "metric": 2441,
+      "metric": 2466,
       "threshold": 30,
-      "message": "⏳ Idle session in rahul_workspace: 2441 min idle, 12 user msgs vs 125 assistant msgs",
-      "timestamp": "2026-05-07T17:38:27.185949+05:30"
+      "message": "⏳ Idle session in rahul_workspace: 2466 min idle, 12 user msgs vs 125 assistant msgs",
+      "timestamp": "2026-05-07T18:03:32.020979+05:30"
     },
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "akash_workspace",
-      "metric": 8352.1,
+      "metric": 8377.2,
       "threshold": 30,
-      "message": "⏳ Idle session in akash_workspace: 8352 min idle, 5 user msgs vs 34 assistant msgs",
-      "timestamp": "2026-05-07T17:38:27.197515+05:30"
+      "message": "⏳ Idle session in akash_workspace: 8377 min idle, 5 user msgs vs 34 assistant msgs",
+      "timestamp": "2026-05-07T18:03:32.036757+05:30"
     },
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "nidhi_workspace",
-      "metric": 8453.6,
+      "metric": 8478.6,
       "threshold": 30,
-      "message": "⏳ Idle session in nidhi_workspace: 8454 min idle, 5 user msgs vs 19 assistant msgs",
-      "timestamp": "2026-05-07T17:38:27.207681+05:30"
+      "message": "⏳ Idle session in nidhi_workspace: 8479 min idle, 5 user msgs vs 19 assistant msgs",
+      "timestamp": "2026-05-07T18:03:32.048051+05:30"
     },
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "pramod_workspace",
-      "metric": 1398.7,
+      "metric": 1423.8,
       "threshold": 30,
-      "message": "⏳ Idle session in pramod_workspace: 1399 min idle, 3 user msgs vs 41 assistant msgs",
-      "timestamp": "2026-05-07T17:38:27.215783+05:30"
+      "message": "⏳ Idle session in pramod_workspace: 1424 min idle, 3 user msgs vs 41 assistant msgs",
+      "timestamp": "2026-05-07T18:03:32.061223+05:30"
     },
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "manju_workspace",
-      "metric": 4402.9,
+      "metric": 4427.9,
       "threshold": 30,
-      "message": "⏳ Idle session in manju_workspace: 4403 min idle, 10 user msgs vs 39 assistant msgs",
-      "timestamp": "2026-05-07T17:38:27.219508+05:30"
+      "message": "⏳ Idle session in manju_workspace: 4428 min idle, 10 user msgs vs 39 assistant msgs",
+      "timestamp": "2026-05-07T18:03:32.067228+05:30"
     },
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "nav_workspace",
-      "metric": 8479.2,
+      "metric": 8504.3,
       "threshold": 30,
-      "message": "⏳ Idle session in nav_workspace: 8479 min idle, 3 user msgs vs 33 assistant msgs",
-      "timestamp": "2026-05-07T17:38:27.222734+05:30"
+      "message": "⏳ Idle session in nav_workspace: 8504 min idle, 3 user msgs vs 33 assistant msgs",
+      "timestamp": "2026-05-07T18:03:32.071781+05:30"
     },
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "arvind_workspace",
-      "metric": 2541.1,
+      "metric": 2566.2,
       "threshold": 30,
-      "message": "⏳ Idle session in arvind_workspace: 2541 min idle, 1 user msgs vs 46 assistant msgs",
-      "timestamp": "2026-05-07T17:38:27.230881+05:30"
+      "message": "⏳ Idle session in arvind_workspace: 2566 min idle, 1 user msgs vs 46 assistant msgs",
+      "timestamp": "2026-05-07T18:03:32.083920+05:30"
     },
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "dipak_workspace",
-      "metric": 4320.3,
+      "metric": 4345.4,
       "threshold": 30,
-      "message": "⏳ Idle session in dipak_workspace: 4320 min idle, 41 user msgs vs 146 assistant msgs",
-      "timestamp": "2026-05-07T17:38:27.241469+05:30"
+      "message": "⏳ Idle session in dipak_workspace: 4345 min idle, 41 user msgs vs 146 assistant msgs",
+      "timestamp": "2026-05-07T18:03:32.101848+05:30"
     },
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "raghu_workspace",
-      "metric": 1122.8,
+      "metric": 1147.8,
       "threshold": 30,
-      "message": "⏳ Idle session in raghu_workspace: 1123 min idle, 29 user msgs vs 219 assistant msgs",
-      "timestamp": "2026-05-07T17:38:27.259953+05:30"
+      "message": "⏳ Idle session in raghu_workspace: 1148 min idle, 29 user msgs vs 219 assistant msgs",
+      "timestamp": "2026-05-07T18:03:32.134578+05:30"
     },
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "rohit_workspace",
-      "metric": 142.5,
+      "metric": 167.5,
       "threshold": 30,
-      "message": "⏳ Idle session in rohit_workspace: 142 min idle, 14 user msgs vs 57 assistant msgs",
-      "timestamp": "2026-05-07T17:38:27.265496+05:30"
+      "message": "⏳ Idle session in rohit_workspace: 168 min idle, 14 user msgs vs 57 assistant msgs",
+      "timestamp": "2026-05-07T18:03:32.142105+05:30"
     },
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "varsha_workspace",
-      "metric": 4229.3,
+      "metric": 4254.4,
       "threshold": 30,
-      "message": "⏳ Idle session in varsha_workspace: 4229 min idle, 4 user msgs vs 16 assistant msgs",
-      "timestamp": "2026-05-07T17:38:27.268109+05:30"
+      "message": "⏳ Idle session in varsha_workspace: 4254 min idle, 4 user msgs vs 16 assistant msgs",
+      "timestamp": "2026-05-07T18:03:32.144833+05:30"
     },
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "sagarkarpe_workspace",
-      "metric": 1359.2,
+      "metric": 1384.3,
       "threshold": 30,
-      "message": "⏳ Idle session in sagarkarpe_workspace: 1359 min idle, 19 user msgs vs 86 assistant msgs",
-      "timestamp": "2026-05-07T17:38:27.275895+05:30"
+      "message": "⏳ Idle session in sagarkarpe_workspace: 1384 min idle, 19 user msgs vs 86 assistant msgs",
+      "timestamp": "2026-05-07T18:03:32.151513+05:30"
     },
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "kristi_workspace",
-      "metric": 8395.1,
+      "metric": 8420.1,
       "threshold": 30,
-      "message": "⏳ Idle session in kristi_workspace: 8395 min idle, 14 user msgs vs 51 assistant msgs",
-      "timestamp": "2026-05-07T17:38:27.283373+05:30"
+      "message": "⏳ Idle session in kristi_workspace: 8420 min idle, 14 user msgs vs 51 assistant msgs",
+      "timestamp": "2026-05-07T18:03:32.157735+05:30"
     },
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "apurva_workspace",
-      "metric": 3998.6,
+      "metric": 4023.7,
       "threshold": 30,
-      "message": "⏳ Idle session in apurva_workspace: 3999 min idle, 13 user msgs vs 50 assistant msgs",
-      "timestamp": "2026-05-07T17:38:27.290231+05:30"
+      "message": "⏳ Idle session in apurva_workspace: 4024 min idle, 13 user msgs vs 50 assistant msgs",
+      "timestamp": "2026-05-07T18:03:32.165095+05:30"
     },
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "dhananjay_workspace",
-      "metric": 1157.9,
+      "metric": 1182.9,
       "threshold": 30,
-      "message": "⏳ Idle session in dhananjay_workspace: 1158 min idle, 11 user msgs vs 35 assistant msgs",
-      "timestamp": "2026-05-07T17:38:27.302676+05:30"
+      "message": "⏳ Idle session in dhananjay_workspace: 1183 min idle, 11 user msgs vs 35 assistant msgs",
+      "timestamp": "2026-05-07T18:03:32.179174+05:30"
     },
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "vignesh_workspace",
-      "metric": 3425.2,
+      "metric": 3450.3,
       "threshold": 30,
-      "message": "⏳ Idle session in vignesh_workspace: 3425 min idle, 10 user msgs vs 49 assistant msgs",
-      "timestamp": "2026-05-07T17:38:27.306204+05:30"
+      "message": "⏳ Idle session in vignesh_workspace: 3450 min idle, 10 user msgs vs 49 assistant msgs",
+      "timestamp": "2026-05-07T18:03:32.183464+05:30"
     },
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "sagar_workspace",
-      "metric": 1462.3,
+      "metric": 1487.4,
       "threshold": 30,
-      "message": "⏳ Idle session in sagar_workspace: 1462 min idle, 15 user msgs vs 74 assistant msgs",
-      "timestamp": "2026-05-07T17:38:27.335039+05:30"
+      "message": "⏳ Idle session in sagar_workspace: 1487 min idle, 15 user msgs vs 74 assistant msgs",
+      "timestamp": "2026-05-07T18:03:32.214674+05:30"
     },
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "akshay_workspace",
-      "metric": 1564.4,
+      "metric": 1589.5,
       "threshold": 30,
-      "message": "⏳ Idle session in akshay_workspace: 1564 min idle, 20 user msgs vs 61 assistant msgs",
-      "timestamp": "2026-05-07T17:38:27.339782+05:30"
+      "message": "⏳ Idle session in akshay_workspace: 1590 min idle, 20 user msgs vs 61 assistant msgs",
+      "timestamp": "2026-05-07T18:03:32.220775+05:30"
     },
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "chris_workspace",
-      "metric": 4407.5,
+      "metric": 4432.6,
       "threshold": 30,
-      "message": "⏳ Idle session in chris_workspace: 4407 min idle, 32 user msgs vs 171 assistant msgs",
-      "timestamp": "2026-05-07T17:38:27.349490+05:30"
+      "message": "⏳ Idle session in chris_workspace: 4433 min idle, 32 user msgs vs 171 assistant msgs",
+      "timestamp": "2026-05-07T18:03:32.231560+05:30"
     },
     {
       "type": "idle_session",
       "severity": "warning",
       "workspace": "will_workspace",
-      "metric": 12382.8,
+      "metric": 12407.9,
       "threshold": 30,
-      "message": "⏳ Idle session in will_workspace: 12383 min idle, 14 user msgs vs 47 assistant msgs",
-      "timestamp": "2026-05-07T17:38:27.353142+05:30"
+      "message": "⏳ Idle session in will_workspace: 12408 min idle, 14 user msgs vs 47 assistant msgs",
+      "timestamp": "2026-05-07T18:03:32.235172+05:30"
     },
     {
       "type": "daily_spend",
       "severity": "warning",
       "workspace": "ALL",
-      "metric": 61.62552496399992,
+      "metric": 65.11282936399992,
       "threshold": 10,
-      "message": "💳 Daily company spend: $61.63 (limit: $10.00)",
-      "timestamp": "2026-05-07T17:38:27.362548+05:30"
+      "message": "💳 Daily company spend: $65.11 (limit: $10.00)",
+      "timestamp": "2026-05-07T18:03:32.246382+05:30"
     },
     {
       "type": "container_restarts",
@@ -198,70 +198,67 @@
       "metric": 37,
       "threshold": 3,
       "message": "🔄 Container restarts: 37 in last hour (limit: 3)",
-      "timestamp": "2026-05-07T17:38:27.362720+05:30"
+      "timestamp": "2026-05-07T18:03:32.246647+05:30"
     }
   ],
   "auto_fixes": [],
   "state": {
-    "last_scan": "2026-05-07T17:38:27.362783+05:30",
+    "last_scan": "2026-05-07T18:03:32.246727+05:30",
     "hourly_costs": {},
     "cpu_readings": [
       {
-        "time": 1778155033.1579359,
-        "idle": 104442129,
-        "total": 105971064
+        "time": 1778156536.2394574,
+        "idle": 105009262,
+        "total": 106574948
       },
       {
-        "time": 1778155105.3800406,
-        "idle": 104470359,
-        "total": 106000027
+        "time": 1778156609.9876127,
+        "idle": 105036763,
+        "total": 106604631
       },
       {
-        "time": 1778155105.6191025,
-        "idle": 104470427,
-        "total": 106000121
+        "time": 1778156610.3271842,
+        "idle": 105036853,
+        "total": 106604768
       },
       {
-        "time": 1778155333.691391,
-        "idle": 104553197,
-        "total": 106091836
+        "time": 1778156836.8637338,
+        "idle": 105125687,
+        "total": 106695794
       },
       {
-        "time": 1778155406.1702547,
-        "idle": 104581655,
-        "total": 106120886
+        "time": 1778156910.9191792,
+        "idle": 105154704,
+        "total": 106725555
       },
       {
-        "time": 1778155406.4475667,
-        "idle": 104581732,
-        "total": 106120999
+        "time": 1778156911.236234,
+        "idle": 105154786,
+        "total": 106725684
       },
       {
-        "time": 1778155634.3090985,
-        "idle": 104666417,
-        "total": 106212455
+        "time": 1778157137.5721686,
+        "idle": 105242020,
+        "total": 106816609
       },
       {
-        "time": 1778155634.9111748,
-        "idle": 104666566,
-        "total": 106212702
+        "time": 1778157211.8852096,
+        "idle": 105267587,
+        "total": 106846445
       },
       {
-        "time": 1778155707.08052,
-        "idle": 104694388,
-        "total": 106241695
-      },
-      {
-        "time": 1778155707.3542106,
-        "idle": 104694465,
-        "total": 106241806
+        "time": 1778157212.2364128,
+        "idle": 105267591,
+        "total": 106846587
       }
     ],
     "container_restarts": {
       "current_pids": [
-        "91200",
+        "104659",
+        "76571",
         "533",
-        "76571"
+        "104644",
+        "91200"
       ],
       "last_pids": [
         "533",
@@ -269,21 +266,6 @@
         "8161"
       ],
       "events": [
-        1778152328.0715342,
-        1778152397.6462138,
-        1778152397.9087226,
-        1778152628.6239803,
-        1778152698.5981622,
-        1778152698.8932252,
-        1778152929.230148,
-        1778152999.5559442,
-        1778152999.9181614,
-        1778153229.809856,
-        1778153300.5742633,
-        1778153300.9031343,
-        1778153530.393328,
-        1778153601.4322681,
-        1778153601.7253664,
         1778153830.9489567,
         1778153902.2849169,
         1778153902.5497804,
@@ -305,7 +287,22 @@
         1778155634.3186085,
         1778155634.9238439,
         1778155707.089383,
-        1778155707.3625202
+        1778155707.3625202,
+        1778155935.0555584,
+        1778156008.0315337,
+        1778156008.3788593,
+        1778156235.6460912,
+        1778156309.0185568,
+        1778156309.3382852,
+        1778156536.2508543,
+        1778156609.9966452,
+        1778156610.3373246,
+        1778156836.8729224,
+        1778156910.928823,
+        1778156911.244891,
+        1778157137.5810564,
+        1778157211.9000394,
+        1778157212.2463424
       ]
     },
     "warning_buffer": [],
@@ -313,7 +310,7 @@
     "daily_spend": {
       "2026-05-05": 203.62081207199944,
       "2026-05-06": 311.58771294799743,
-      "2026-05-07": 61.62552496399992
+      "2026-05-07": 65.11282936399992
     },
     "employee_daily_spend": {
       "2026-05-05": {
@@ -401,11 +398,11 @@
       "2026-05-07": {
         "rahul_workspace": 0,
         "naveen_workspace": 2.236193762,
-        "pooja_workspace": 4.980576550000002,
+        "pooja_workspace": 7.881538150000005,
         "akash_workspace": 0,
         "nidhin_workspace": 0,
-        "gopika_workspace": 0.509885,
-        "communal_workspace": 0.36437119999999995,
+        "gopika_workspace": 0.7546297999999995,
+        "communal_workspace": 0.7059692000000004,
         "omkar_workspace": 0,
         "nidhi_workspace": 0,
         "ashwin_workspace": 0,
@@ -442,15 +439,15 @@
     }
   },
   "fixerResults": {
-    "fixer_time": "2026-05-07T17:38:27.141156+05:30",
+    "fixer_time": "2026-05-07T18:03:31.953887+05:30",
     "fixes_attempted": 22,
     "fixes_success": 2,
     "fixes_failed": 0,
     "fixes_skipped": 20,
     "details": [
       {
-        "id": "062e6cd7",
-        "timestamp": "2026-05-07T17:38:27.144370+05:30",
+        "id": "f41fdf95",
+        "timestamp": "2026-05-07T18:03:31.957634+05:30",
         "fix_type": "idle_session",
         "workspace": "rahul_workspace",
         "status": "skipped",
@@ -458,8 +455,8 @@
         "details": {}
       },
       {
-        "id": "98146def",
-        "timestamp": "2026-05-07T17:38:27.145546+05:30",
+        "id": "53ac8f67",
+        "timestamp": "2026-05-07T18:03:31.959012+05:30",
         "fix_type": "idle_session",
         "workspace": "akash_workspace",
         "status": "skipped",
@@ -467,8 +464,8 @@
         "details": {}
       },
       {
-        "id": "694c39b9",
-        "timestamp": "2026-05-07T17:38:27.146573+05:30",
+        "id": "a8f5b97b",
+        "timestamp": "2026-05-07T18:03:31.960246+05:30",
         "fix_type": "idle_session",
         "workspace": "nidhi_workspace",
         "status": "skipped",
@@ -476,8 +473,8 @@
         "details": {}
       },
       {
-        "id": "cf1a397a",
-        "timestamp": "2026-05-07T17:38:27.148315+05:30",
+        "id": "38e16011",
+        "timestamp": "2026-05-07T18:03:31.962730+05:30",
         "fix_type": "idle_session",
         "workspace": "pramod_workspace",
         "status": "skipped",
@@ -485,8 +482,8 @@
         "details": {}
       },
       {
-        "id": "379eb9f6",
-        "timestamp": "2026-05-07T17:38:27.149432+05:30",
+        "id": "eb762495",
+        "timestamp": "2026-05-07T18:03:31.963798+05:30",
         "fix_type": "idle_session",
         "workspace": "manju_workspace",
         "status": "skipped",
@@ -494,8 +491,8 @@
         "details": {}
       },
       {
-        "id": "eddc6b35",
-        "timestamp": "2026-05-07T17:38:27.150491+05:30",
+        "id": "fb88e30a",
+        "timestamp": "2026-05-07T18:03:31.964690+05:30",
         "fix_type": "idle_session",
         "workspace": "nav_workspace",
         "status": "skipped",
@@ -503,8 +500,8 @@
         "details": {}
       },
       {
-        "id": "3d3061f2",
-        "timestamp": "2026-05-07T17:38:27.151543+05:30",
+        "id": "ac8a43b2",
+        "timestamp": "2026-05-07T18:03:31.966232+05:30",
         "fix_type": "idle_session",
         "workspace": "arvind_workspace",
         "status": "skipped",
@@ -512,8 +509,8 @@
         "details": {}
       },
       {
-        "id": "fe22b68d",
-        "timestamp": "2026-05-07T17:38:27.153598+05:30",
+        "id": "3959c760",
+        "timestamp": "2026-05-07T18:03:31.969429+05:30",
         "fix_type": "idle_session",
         "workspace": "dipak_workspace",
         "status": "skipped",
@@ -521,8 +518,8 @@
         "details": {}
       },
       {
-        "id": "e6ea1a7d",
-        "timestamp": "2026-05-07T17:38:27.157227+05:30",
+        "id": "cef697c6",
+        "timestamp": "2026-05-07T18:03:31.977525+05:30",
         "fix_type": "idle_session",
         "workspace": "raghu_workspace",
         "status": "skipped",
@@ -530,8 +527,8 @@
         "details": {}
       },
       {
-        "id": "75d919e2",
-        "timestamp": "2026-05-07T17:38:27.158246+05:30",
+        "id": "114f9a8b",
+        "timestamp": "2026-05-07T18:03:31.980509+05:30",
         "fix_type": "idle_session",
         "workspace": "rohit_workspace",
         "status": "skipped",
@@ -539,8 +536,8 @@
         "details": {}
       },
       {
-        "id": "c7e5e14f",
-        "timestamp": "2026-05-07T17:38:27.159064+05:30",
+        "id": "0680f5b2",
+        "timestamp": "2026-05-07T18:03:31.982554+05:30",
         "fix_type": "idle_session",
         "workspace": "varsha_workspace",
         "status": "skipped",
@@ -548,8 +545,8 @@
         "details": {}
       },
       {
-        "id": "1b410079",
-        "timestamp": "2026-05-07T17:38:27.159987+05:30",
+        "id": "eee746b3",
+        "timestamp": "2026-05-07T18:03:31.984013+05:30",
         "fix_type": "idle_session",
         "workspace": "sagarkarpe_workspace",
         "status": "skipped",
@@ -557,8 +554,8 @@
         "details": {}
       },
       {
-        "id": "a4759d58",
-        "timestamp": "2026-05-07T17:38:27.161376+05:30",
+        "id": "b6ad3b42",
+        "timestamp": "2026-05-07T18:03:31.985902+05:30",
         "fix_type": "idle_session",
         "workspace": "kristi_workspace",
         "status": "skipped",
@@ -566,8 +563,8 @@
         "details": {}
       },
       {
-        "id": "40275698",
-        "timestamp": "2026-05-07T17:38:27.162619+05:30",
+        "id": "c2e0ae53",
+        "timestamp": "2026-05-07T18:03:31.987347+05:30",
         "fix_type": "idle_session",
         "workspace": "apurva_workspace",
         "status": "skipped",
@@ -575,8 +572,8 @@
         "details": {}
       },
       {
-        "id": "0c368ddb",
-        "timestamp": "2026-05-07T17:38:27.163623+05:30",
+        "id": "2556f186",
+        "timestamp": "2026-05-07T18:03:31.988748+05:30",
         "fix_type": "idle_session",
         "workspace": "dhananjay_workspace",
         "status": "skipped",
@@ -584,8 +581,8 @@
         "details": {}
       },
       {
-        "id": "9f23269f",
-        "timestamp": "2026-05-07T17:38:27.164611+05:30",
+        "id": "6668bfd1",
+        "timestamp": "2026-05-07T18:03:31.990102+05:30",
         "fix_type": "idle_session",
         "workspace": "vignesh_workspace",
         "status": "skipped",
@@ -593,8 +590,8 @@
         "details": {}
       },
       {
-        "id": "75149259",
-        "timestamp": "2026-05-07T17:38:27.167318+05:30",
+        "id": "194741b9",
+        "timestamp": "2026-05-07T18:03:31.994432+05:30",
         "fix_type": "idle_session",
         "workspace": "sagar_workspace",
         "status": "skipped",
@@ -602,8 +599,8 @@
         "details": {}
       },
       {
-        "id": "6a28269d",
-        "timestamp": "2026-05-07T17:38:27.168159+05:30",
+        "id": "b8bd597d",
+        "timestamp": "2026-05-07T18:03:31.996195+05:30",
         "fix_type": "idle_session",
         "workspace": "akshay_workspace",
         "status": "skipped",
@@ -611,8 +608,8 @@
         "details": {}
       },
       {
-        "id": "e3f0974d",
-        "timestamp": "2026-05-07T17:38:27.171037+05:30",
+        "id": "4977ce0a",
+        "timestamp": "2026-05-07T18:03:32.000750+05:30",
         "fix_type": "idle_session",
         "workspace": "chris_workspace",
         "status": "skipped",
@@ -620,8 +617,8 @@
         "details": {}
       },
       {
-        "id": "c386a40b",
-        "timestamp": "2026-05-07T17:38:27.172001+05:30",
+        "id": "75e98902",
+        "timestamp": "2026-05-07T18:03:32.002039+05:30",
         "fix_type": "idle_session",
         "workspace": "will_workspace",
         "status": "skipped",
@@ -629,8 +626,8 @@
         "details": {}
       },
       {
-        "id": "ca0ce242",
-        "timestamp": "2026-05-07T17:38:27.173773+05:30",
+        "id": "0515efdd",
+        "timestamp": "2026-05-07T18:03:32.004385+05:30",
         "fix_type": "ram_high",
         "workspace": "SYSTEM",
         "status": "success",
@@ -640,8 +637,8 @@
         }
       },
       {
-        "id": "daff033f",
-        "timestamp": "2026-05-07T17:38:27.175083+05:30",
+        "id": "793c531e",
+        "timestamp": "2026-05-07T18:03:32.006228+05:30",
         "fix_type": "ram_high",
         "workspace": "SYSTEM",
         "status": "success",
@@ -654,8 +651,8 @@
   },
   "fixerLog": [
     {
-      "id": "ccb30dc4",
-      "timestamp": "2026-05-07T17:37:14.712202+05:30",
+      "id": "d29dbe84",
+      "timestamp": "2026-05-07T17:58:31.035321+05:30",
       "fix_type": "idle_session",
       "workspace": "will_workspace",
       "status": "started",
@@ -663,8 +660,8 @@
       "details": {}
     },
     {
-      "id": "23ea7638",
-      "timestamp": "2026-05-07T17:37:14.713178+05:30",
+      "id": "a8384266",
+      "timestamp": "2026-05-07T17:58:31.036301+05:30",
       "fix_type": "idle_session",
       "workspace": "will_workspace",
       "status": "skipped",
@@ -672,8 +669,8 @@
       "details": {}
     },
     {
-      "id": "b7b61de9",
-      "timestamp": "2026-05-07T17:37:14.713365+05:30",
+      "id": "b7817696",
+      "timestamp": "2026-05-07T17:58:31.036486+05:30",
       "fix_type": "ram_high",
       "workspace": "SYSTEM",
       "status": "started",
@@ -681,8 +678,8 @@
       "details": {}
     },
     {
-      "id": "1d9f8384",
-      "timestamp": "2026-05-07T17:37:14.715605+05:30",
+      "id": "b5fc1ef1",
+      "timestamp": "2026-05-07T17:58:31.038268+05:30",
       "fix_type": "ram_high",
       "workspace": "SYSTEM",
       "status": "success",
@@ -692,8 +689,8 @@
       }
     },
     {
-      "id": "44fdaf5d",
-      "timestamp": "2026-05-07T17:37:14.716716+05:30",
+      "id": "fa5f0329",
+      "timestamp": "2026-05-07T17:58:31.038420+05:30",
       "fix_type": "ram_high",
       "workspace": "SYSTEM",
       "status": "started",
@@ -701,8 +698,8 @@
       "details": {}
     },
     {
-      "id": "c9c4423e",
-      "timestamp": "2026-05-07T17:37:14.718718+05:30",
+      "id": "769c69b6",
+      "timestamp": "2026-05-07T17:58:31.040026+05:30",
       "fix_type": "ram_high",
       "workspace": "SYSTEM",
       "status": "success",
@@ -712,8 +709,8 @@
       }
     },
     {
-      "id": "eccae665",
-      "timestamp": "2026-05-07T17:38:27.141382+05:30",
+      "id": "177406ac",
+      "timestamp": "2026-05-07T18:03:31.954417+05:30",
       "fix_type": "idle_session",
       "workspace": "rahul_workspace",
       "status": "started",
@@ -721,8 +718,8 @@
       "details": {}
     },
     {
-      "id": "062e6cd7",
-      "timestamp": "2026-05-07T17:38:27.144370+05:30",
+      "id": "f41fdf95",
+      "timestamp": "2026-05-07T18:03:31.957634+05:30",
       "fix_type": "idle_session",
       "workspace": "rahul_workspace",
       "status": "skipped",
@@ -730,8 +727,8 @@
       "details": {}
     },
     {
-      "id": "66de23a0",
-      "timestamp": "2026-05-07T17:38:27.144619+05:30",
+      "id": "c9c2dd36",
+      "timestamp": "2026-05-07T18:03:31.957919+05:30",
       "fix_type": "idle_session",
       "workspace": "akash_workspace",
       "status": "started",
@@ -739,8 +736,8 @@
       "details": {}
     },
     {
-      "id": "98146def",
-      "timestamp": "2026-05-07T17:38:27.145546+05:30",
+      "id": "53ac8f67",
+      "timestamp": "2026-05-07T18:03:31.959012+05:30",
       "fix_type": "idle_session",
       "workspace": "akash_workspace",
       "status": "skipped",
@@ -748,8 +745,8 @@
       "details": {}
     },
     {
-      "id": "acf00429",
-      "timestamp": "2026-05-07T17:38:27.145692+05:30",
+      "id": "19a6ea58",
+      "timestamp": "2026-05-07T18:03:31.959219+05:30",
       "fix_type": "idle_session",
       "workspace": "nidhi_workspace",
       "status": "started",
@@ -757,8 +754,8 @@
       "details": {}
     },
     {
-      "id": "694c39b9",
-      "timestamp": "2026-05-07T17:38:27.146573+05:30",
+      "id": "a8f5b97b",
+      "timestamp": "2026-05-07T18:03:31.960246+05:30",
       "fix_type": "idle_session",
       "workspace": "nidhi_workspace",
       "status": "skipped",
@@ -766,8 +763,8 @@
       "details": {}
     },
     {
-      "id": "3e556795",
-      "timestamp": "2026-05-07T17:38:27.146707+05:30",
+      "id": "0da24d6c",
+      "timestamp": "2026-05-07T18:03:31.960497+05:30",
       "fix_type": "idle_session",
       "workspace": "pramod_workspace",
       "status": "started",
@@ -775,8 +772,8 @@
       "details": {}
     },
     {
-      "id": "cf1a397a",
-      "timestamp": "2026-05-07T17:38:27.148315+05:30",
+      "id": "38e16011",
+      "timestamp": "2026-05-07T18:03:31.962730+05:30",
       "fix_type": "idle_session",
       "workspace": "pramod_workspace",
       "status": "skipped",
@@ -784,8 +781,8 @@
       "details": {}
     },
     {
-      "id": "0dd139e9",
-      "timestamp": "2026-05-07T17:38:27.148493+05:30",
+      "id": "dc04a48c",
+      "timestamp": "2026-05-07T18:03:31.962924+05:30",
       "fix_type": "idle_session",
       "workspace": "manju_workspace",
       "status": "started",
@@ -793,8 +790,8 @@
       "details": {}
     },
     {
-      "id": "379eb9f6",
-      "timestamp": "2026-05-07T17:38:27.149432+05:30",
+      "id": "eb762495",
+      "timestamp": "2026-05-07T18:03:31.963798+05:30",
       "fix_type": "idle_session",
       "workspace": "manju_workspace",
       "status": "skipped",
@@ -802,8 +799,8 @@
       "details": {}
     },
     {
-      "id": "18a71d82",
-      "timestamp": "2026-05-07T17:38:27.149591+05:30",
+      "id": "f88bd4f8",
+      "timestamp": "2026-05-07T18:03:31.963933+05:30",
       "fix_type": "idle_session",
       "workspace": "nav_workspace",
       "status": "started",
@@ -811,8 +808,8 @@
       "details": {}
     },
     {
-      "id": "eddc6b35",
-      "timestamp": "2026-05-07T17:38:27.150491+05:30",
+      "id": "fb88e30a",
+      "timestamp": "2026-05-07T18:03:31.964690+05:30",
       "fix_type": "idle_session",
       "workspace": "nav_workspace",
       "status": "skipped",
@@ -820,8 +817,8 @@
       "details": {}
     },
     {
-      "id": "2f7b8263",
-      "timestamp": "2026-05-07T17:38:27.150616+05:30",
+      "id": "9af5cb5e",
+      "timestamp": "2026-05-07T18:03:31.964807+05:30",
       "fix_type": "idle_session",
       "workspace": "arvind_workspace",
       "status": "started",
@@ -829,8 +826,8 @@
       "details": {}
     },
     {
-      "id": "3d3061f2",
-      "timestamp": "2026-05-07T17:38:27.151543+05:30",
+      "id": "ac8a43b2",
+      "timestamp": "2026-05-07T18:03:31.966232+05:30",
       "fix_type": "idle_session",
       "workspace": "arvind_workspace",
       "status": "skipped",
@@ -838,8 +835,8 @@
       "details": {}
     },
     {
-      "id": "358ae93b",
-      "timestamp": "2026-05-07T17:38:27.151696+05:30",
+      "id": "905a2e48",
+      "timestamp": "2026-05-07T18:03:31.966474+05:30",
       "fix_type": "idle_session",
       "workspace": "dipak_workspace",
       "status": "started",
@@ -847,8 +844,8 @@
       "details": {}
     },
     {
-      "id": "fe22b68d",
-      "timestamp": "2026-05-07T17:38:27.153598+05:30",
+      "id": "3959c760",
+      "timestamp": "2026-05-07T18:03:31.969429+05:30",
       "fix_type": "idle_session",
       "workspace": "dipak_workspace",
       "status": "skipped",
@@ -856,8 +853,8 @@
       "details": {}
     },
     {
-      "id": "2d29be1f",
-      "timestamp": "2026-05-07T17:38:27.153766+05:30",
+      "id": "e20c1761",
+      "timestamp": "2026-05-07T18:03:31.969898+05:30",
       "fix_type": "idle_session",
       "workspace": "raghu_workspace",
       "status": "started",
@@ -865,8 +862,8 @@
       "details": {}
     },
     {
-      "id": "e6ea1a7d",
-      "timestamp": "2026-05-07T17:38:27.157227+05:30",
+      "id": "cef697c6",
+      "timestamp": "2026-05-07T18:03:31.977525+05:30",
       "fix_type": "idle_session",
       "workspace": "raghu_workspace",
       "status": "skipped",
@@ -874,8 +871,8 @@
       "details": {}
     },
     {
-      "id": "6fc377fb",
-      "timestamp": "2026-05-07T17:38:27.157412+05:30",
+      "id": "d6965b45",
+      "timestamp": "2026-05-07T18:03:31.978260+05:30",
       "fix_type": "idle_session",
       "workspace": "rohit_workspace",
       "status": "started",
@@ -883,8 +880,8 @@
       "details": {}
     },
     {
-      "id": "75d919e2",
-      "timestamp": "2026-05-07T17:38:27.158246+05:30",
+      "id": "114f9a8b",
+      "timestamp": "2026-05-07T18:03:31.980509+05:30",
       "fix_type": "idle_session",
       "workspace": "rohit_workspace",
       "status": "skipped",
@@ -892,8 +889,8 @@
       "details": {}
     },
     {
-      "id": "665cb31a",
-      "timestamp": "2026-05-07T17:38:27.158399+05:30",
+      "id": "38b762c3",
+      "timestamp": "2026-05-07T18:03:31.980770+05:30",
       "fix_type": "idle_session",
       "workspace": "varsha_workspace",
       "status": "started",
@@ -901,8 +898,8 @@
       "details": {}
     },
     {
-      "id": "c7e5e14f",
-      "timestamp": "2026-05-07T17:38:27.159064+05:30",
+      "id": "0680f5b2",
+      "timestamp": "2026-05-07T18:03:31.982554+05:30",
       "fix_type": "idle_session",
       "workspace": "varsha_workspace",
       "status": "skipped",
@@ -910,8 +907,8 @@
       "details": {}
     },
     {
-      "id": "71500734",
-      "timestamp": "2026-05-07T17:38:27.159241+05:30",
+      "id": "4ca6395e",
+      "timestamp": "2026-05-07T18:03:31.982769+05:30",
       "fix_type": "idle_session",
       "workspace": "sagarkarpe_workspace",
       "status": "started",
@@ -919,8 +916,8 @@
       "details": {}
     },
     {
-      "id": "1b410079",
-      "timestamp": "2026-05-07T17:38:27.159987+05:30",
+      "id": "eee746b3",
+      "timestamp": "2026-05-07T18:03:31.984013+05:30",
       "fix_type": "idle_session",
       "workspace": "sagarkarpe_workspace",
       "status": "skipped",
@@ -928,8 +925,8 @@
       "details": {}
     },
     {
-      "id": "b11f9b05",
-      "timestamp": "2026-05-07T17:38:27.160126+05:30",
+      "id": "cbe9c2d0",
+      "timestamp": "2026-05-07T18:03:31.984233+05:30",
       "fix_type": "idle_session",
       "workspace": "kristi_workspace",
       "status": "started",
@@ -937,8 +934,8 @@
       "details": {}
     },
     {
-      "id": "a4759d58",
-      "timestamp": "2026-05-07T17:38:27.161376+05:30",
+      "id": "b6ad3b42",
+      "timestamp": "2026-05-07T18:03:31.985902+05:30",
       "fix_type": "idle_session",
       "workspace": "kristi_workspace",
       "status": "skipped",
@@ -946,8 +943,8 @@
       "details": {}
     },
     {
-      "id": "4026a945",
-      "timestamp": "2026-05-07T17:38:27.161518+05:30",
+      "id": "ecb5a27c",
+      "timestamp": "2026-05-07T18:03:31.986211+05:30",
       "fix_type": "idle_session",
       "workspace": "apurva_workspace",
       "status": "started",
@@ -955,8 +952,8 @@
       "details": {}
     },
     {
-      "id": "40275698",
-      "timestamp": "2026-05-07T17:38:27.162619+05:30",
+      "id": "c2e0ae53",
+      "timestamp": "2026-05-07T18:03:31.987347+05:30",
       "fix_type": "idle_session",
       "workspace": "apurva_workspace",
       "status": "skipped",
@@ -964,8 +961,8 @@
       "details": {}
     },
     {
-      "id": "314fa11f",
-      "timestamp": "2026-05-07T17:38:27.162749+05:30",
+      "id": "a2c20995",
+      "timestamp": "2026-05-07T18:03:31.987602+05:30",
       "fix_type": "idle_session",
       "workspace": "dhananjay_workspace",
       "status": "started",
@@ -973,8 +970,8 @@
       "details": {}
     },
     {
-      "id": "0c368ddb",
-      "timestamp": "2026-05-07T17:38:27.163623+05:30",
+      "id": "2556f186",
+      "timestamp": "2026-05-07T18:03:31.988748+05:30",
       "fix_type": "idle_session",
       "workspace": "dhananjay_workspace",
       "status": "skipped",
@@ -982,8 +979,8 @@
       "details": {}
     },
     {
-      "id": "168e08a0",
-      "timestamp": "2026-05-07T17:38:27.163749+05:30",
+      "id": "2d137b31",
+      "timestamp": "2026-05-07T18:03:31.988974+05:30",
       "fix_type": "idle_session",
       "workspace": "vignesh_workspace",
       "status": "started",
@@ -991,8 +988,8 @@
       "details": {}
     },
     {
-      "id": "9f23269f",
-      "timestamp": "2026-05-07T17:38:27.164611+05:30",
+      "id": "6668bfd1",
+      "timestamp": "2026-05-07T18:03:31.990102+05:30",
       "fix_type": "idle_session",
       "workspace": "vignesh_workspace",
       "status": "skipped",
@@ -1000,8 +997,8 @@
       "details": {}
     },
     {
-      "id": "76f07038",
-      "timestamp": "2026-05-07T17:38:27.164752+05:30",
+      "id": "7c7c01ce",
+      "timestamp": "2026-05-07T18:03:31.990308+05:30",
       "fix_type": "idle_session",
       "workspace": "sagar_workspace",
       "status": "started",
@@ -1009,8 +1006,8 @@
       "details": {}
     },
     {
-      "id": "75149259",
-      "timestamp": "2026-05-07T17:38:27.167318+05:30",
+      "id": "194741b9",
+      "timestamp": "2026-05-07T18:03:31.994432+05:30",
       "fix_type": "idle_session",
       "workspace": "sagar_workspace",
       "status": "skipped",
@@ -1018,8 +1015,8 @@
       "details": {}
     },
     {
-      "id": "cbd6c4ef",
-      "timestamp": "2026-05-07T17:38:27.167513+05:30",
+      "id": "3d88d983",
+      "timestamp": "2026-05-07T18:03:31.994770+05:30",
       "fix_type": "idle_session",
       "workspace": "akshay_workspace",
       "status": "started",
@@ -1027,8 +1024,8 @@
       "details": {}
     },
     {
-      "id": "6a28269d",
-      "timestamp": "2026-05-07T17:38:27.168159+05:30",
+      "id": "b8bd597d",
+      "timestamp": "2026-05-07T18:03:31.996195+05:30",
       "fix_type": "idle_session",
       "workspace": "akshay_workspace",
       "status": "skipped",
@@ -1036,8 +1033,8 @@
       "details": {}
     },
     {
-      "id": "2c906aa7",
-      "timestamp": "2026-05-07T17:38:27.168290+05:30",
+      "id": "3fee8584",
+      "timestamp": "2026-05-07T18:03:31.996464+05:30",
       "fix_type": "idle_session",
       "workspace": "chris_workspace",
       "status": "started",
@@ -1045,8 +1042,8 @@
       "details": {}
     },
     {
-      "id": "e3f0974d",
-      "timestamp": "2026-05-07T17:38:27.171037+05:30",
+      "id": "4977ce0a",
+      "timestamp": "2026-05-07T18:03:32.000750+05:30",
       "fix_type": "idle_session",
       "workspace": "chris_workspace",
       "status": "skipped",
@@ -1054,8 +1051,8 @@
       "details": {}
     },
     {
-      "id": "b95543bb",
-      "timestamp": "2026-05-07T17:38:27.171216+05:30",
+      "id": "75cec6ec",
+      "timestamp": "2026-05-07T18:03:32.001013+05:30",
       "fix_type": "idle_session",
       "workspace": "will_workspace",
       "status": "started",
@@ -1063,8 +1060,8 @@
       "details": {}
     },
     {
-      "id": "c386a40b",
-      "timestamp": "2026-05-07T17:38:27.172001+05:30",
+      "id": "75e98902",
+      "timestamp": "2026-05-07T18:03:32.002039+05:30",
       "fix_type": "idle_session",
       "workspace": "will_workspace",
       "status": "skipped",
@@ -1072,8 +1069,8 @@
       "details": {}
     },
     {
-      "id": "4ba92e44",
-      "timestamp": "2026-05-07T17:38:27.172154+05:30",
+      "id": "ef8acd18",
+      "timestamp": "2026-05-07T18:03:32.002222+05:30",
       "fix_type": "ram_high",
       "workspace": "SYSTEM",
       "status": "started",
@@ -1081,8 +1078,8 @@
       "details": {}
     },
     {
-      "id": "ca0ce242",
-      "timestamp": "2026-05-07T17:38:27.173773+05:30",
+      "id": "0515efdd",
+      "timestamp": "2026-05-07T18:03:32.004385+05:30",
       "fix_type": "ram_high",
       "workspace": "SYSTEM",
       "status": "success",
@@ -1092,8 +1089,8 @@
       }
     },
     {
-      "id": "62dda3ab",
-      "timestamp": "2026-05-07T17:38:27.173889+05:30",
+      "id": "d3be12ed",
+      "timestamp": "2026-05-07T18:03:32.004628+05:30",
       "fix_type": "ram_high",
       "workspace": "SYSTEM",
       "status": "started",
@@ -1101,8 +1098,8 @@
       "details": {}
     },
     {
-      "id": "daff033f",
-      "timestamp": "2026-05-07T17:38:27.175083+05:30",
+      "id": "793c531e",
+      "timestamp": "2026-05-07T18:03:32.006228+05:30",
       "fix_type": "ram_high",
       "workspace": "SYSTEM",
       "status": "success",
