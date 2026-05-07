@@ -78,6 +78,14 @@ export default function LandingPage() {
       glow: 'rgba(239,68,68,0.3)',
       delay: '1.5s',
     },
+    {
+      icon: '🎯',
+      title: 'Kanban',
+      desc: 'Mission control board',
+      href: '/kanban',
+      glow: 'rgba(124,58,237,0.3)',
+      delay: '2s',
+    },
   ];
 
   return (
