@@ -9,6 +9,7 @@ import AnimatedCounter from '@/components/AnimatedCounter';
 import ProgressBar from '@/components/ProgressBar';
 import ParticleBackground from '@/components/ParticleBackground';
 import RocketAnimation from '@/components/RocketAnimation';
+import ExportPDFButton from '@/components/ExportPDFButton';
 
 interface Employee {
   name: string;
@@ -160,6 +161,7 @@ export default function HrPage() {
                 All Time
               </button>
             </div>
+            <ExportPDFButton employees={employees} viewMode={viewMode} />
             <Link href="/" className="text-purple-300 hover:text-white text-sm">← Home</Link>
           </div>
         </div>
